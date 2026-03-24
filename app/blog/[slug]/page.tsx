@@ -7,7 +7,7 @@ import FadeInSection from '@/components/FadeInSection'
 import { blogPosts, getBlogPost, getAllSlugs, type BlogPost, type BlogSection } from '@/lib/blog-data'
 
 interface PageProps {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 export async function generateStaticParams() {
@@ -15,7 +15,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const post = getBlogPost(params.slug)
+  const { slug } = await params
+  const post = getBlogPost(slug)
   if (!post) return {}
 
   return {
@@ -115,11 +116,12 @@ function renderSection(section: BlogSection, index: number) {
   }
 }
 
-export default function BlogPostPage({ params }: PageProps) {
-  const post = getBlogPost(params.slug)
+export default async function BlogPostPage({ params }: PageProps) {
+  const { slug } = await params
+  const post = getBlogPost(slug)
   if (!post) notFound()
 
-  const otherPosts = blogPosts.filter((p) => p.slug !== params.slug).slice(0, 3)
+  const otherPosts = blogPosts.filter((p) => p.slug !== slug).slice(0, 3)
   const tocItems = post.content
     .filter((s) => s.type === 'h2' && s.text)
     .map((s) => ({ text: s.text!, id: slugifyHeading(s.text!) }))
