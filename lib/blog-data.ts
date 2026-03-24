@@ -6,6 +6,7 @@ export interface BlogPost {
   excerpt: string
   readingTime: string
   category: string
+  image?: string
   content: BlogSection[]
 }
 
@@ -25,6 +26,7 @@ export const blogPosts: BlogPost[] = [
       'Chcesz zmienić pracę, ale nie wiesz od czego zacząć? Dowiedz się, jak krok po kroku zaplanować zmianę zawodową bez niepotrzebnego stresu i chaosu.',
     readingTime: '6 min',
     category: 'Zmiana pracy',
+    image: '/gfx/ewelina_1.jpg',
     content: [
       {
         type: 'paragraph',
@@ -95,6 +97,7 @@ export const blogPosts: BlogPost[] = [
       'Czy Twoja praca naprawdę Ci służy? Poznaj sygnały — fizyczne, emocjonalne i zawodowe — które mogą wskazywać, że czas na zmianę.',
     readingTime: '5 min',
     category: 'Wypalenie zawodowe',
+    image: '/gfx/ewelina_2.jpg',
     content: [
       {
         type: 'paragraph',
@@ -166,6 +169,7 @@ export const blogPosts: BlogPost[] = [
       'Pewność siebie w pracy to nie cecha wrodzona, a umiejętność. Dowiedz się, jak ją budować na solidnych fundamentach — bez udawania i zewnętrznej presji.',
     readingTime: '7 min',
     category: 'Pewność siebie',
+    image: '/gfx/ewelina_3.jpg',
     content: [
       {
         type: 'paragraph',
@@ -236,6 +240,7 @@ export const blogPosts: BlogPost[] = [
       'Jak podejmować decyzje zawodowe, które są naprawdę Twoje? Odkryj metodę opartą na wartościach, umiejętnościach i stylu życia.',
     readingTime: '6 min',
     category: 'Decyzje zawodowe',
+    image: '/gfx/ewelina_4.jpg',
     content: [
       {
         type: 'paragraph',
@@ -294,6 +299,306 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'paragraph',
         text: 'Nie czekaj na pewność, bo ta rzadko przychodzi przed podjęciem decyzji. Dobra decyzja zawodowa to taka, która jest spójna z tym, kim jesteś i kim chcesz być — nie ta, która jest idealna. Jeśli czujesz się zagubiony/a w tym procesie, praca z konsultantką kariery może pomóc Ci poukładać te elementy i zobaczyć kierunek, który Ci umknął.',
+      },
+    ],
+  },
+  {
+    slug: 'wspolpraca-z-konsultantka-kariery',
+    title: 'Jak wygląda współpraca z konsultantką kariery? Czego możesz się spodziewać',
+    date: '5 listopada 2025',
+    dateISO: '2025-11-05',
+    excerpt:
+      'Zastanawiasz się, czym tak naprawdę zajmuje się konsultantka kariery i jak wygląda ta współpraca w praktyce? Poznaj cały proces — od pierwszej rozmowy do osiągnięcia celu zawodowego.',
+    readingTime: '5 min',
+    category: 'Zmiana pracy',
+    image: '/gfx/smiley-businesswomen-having-meeting.jpg',
+    content: [
+      {
+        type: 'paragraph',
+        text: 'Wiele osób słyszy "konsultantka kariery" i wyobraża sobie kogoś, kto przeglądnie CV i powie, co poprawić. To zupełnie inne doświadczenie. Współpraca z konsultantką kariery to proces — głębszy, bardziej osobisty i zdecydowanie bardziej skuteczny niż jakikolwiek poradnik czy artykuł.',
+      },
+      {
+        type: 'h2',
+        text: 'Pierwsza rozmowa — od czego wszystko się zaczyna',
+      },
+      {
+        type: 'paragraph',
+        text: 'Każda współpraca zaczyna się od bezpłatnej rozmowy wstępnej. To nie jest rozmowa kwalifikacyjna ani ocena — to przestrzeń, w której możesz opowiedzieć o swojej sytuacji zawodowej i tym, czego szukasz. Dla mnie to moment, w którym staram się zrozumieć, z czym naprawdę przychodzisz — bo za każdym "chcę zmienić pracę" kryje się inna historia.',
+      },
+      {
+        type: 'paragraph',
+        text: 'Na podstawie tej rozmowy razem decydujemy, czy i w jaki sposób współpraca ma sens. Nie każda osoba potrzebuje tego samego — dlatego pracuję w kilku formatach: sesje indywidualne, pakiety, programy intensywne.',
+      },
+      {
+        type: 'h2',
+        text: 'Co dzieje się podczas sesji?',
+      },
+      {
+        type: 'paragraph',
+        text: 'Sesja to rozmowa — ale ustrukturyzowana, skupiona na Tobie i Twoim celu. W jej trakcie zadaję pytania, które pomagają Ci spojrzeć na swoją sytuację z nowej perspektywy. Nie mówię Ci, co masz robić — pomagam Ci odkryć, co jest dla Ciebie właściwe. To zasadnicza różnica.',
+      },
+      {
+        type: 'list',
+        items: [
+          'Analiza Twojej sytuacji zawodowej i celów',
+          'Identyfikacja wartości, mocnych stron i ograniczających przekonań',
+          'Praca nad konkretnym wyzwaniem — CV, rozmowa, decyzja o zmianie',
+          'Tworzenie planu działania z konkretnymi krokami',
+          'Wsparcie w realizacji i weryfikacja postępów',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Ile sesji jest potrzebnych?',
+      },
+      {
+        type: 'paragraph',
+        text: 'To zależy od Twojej sytuacji. Niektóre osoby przychodzą z jednym konkretnym pytaniem i potrzebują 2–3 sesji, by je rozwiązać. Inne chcą przejść przez pełny proces — od diagnozy po nową pracę — i pracujemy razem przez kilka miesięcy. Nie ma jednej odpowiedzi, bo każda droga jest inna.',
+      },
+      {
+        type: 'h2',
+        text: 'Czego możesz się spodziewać po współpracy?',
+      },
+      {
+        type: 'paragraph',
+        text: 'Efekty, które najczęściej obserwuję u klientów: większa jasność co do kierunku zawodowego, konkretny plan działania, lepiej napisane CV i profil LinkedIn, bardziej pewna i skuteczna autoprezentacja na rozmowach, a przede wszystkim — odwaga do działania. Zmiana kariery to nie jest kwestia szczęścia. To kwestia decyzji, planu i wsparcia.',
+      },
+    ],
+  },
+  {
+    slug: 'jak-sie-przygotowac-do-rozmowy-kwalifikacyjnej',
+    title: 'Jak przygotować się do rozmowy kwalifikacyjnej – o czym zapominają kandydaci',
+    date: '12 listopada 2025',
+    dateISO: '2025-11-12',
+    excerpt:
+      'Większość kandydatów przygotowuje się do rozmowy kwalifikacyjnej w ten sam sposób — i właśnie dlatego niczym się nie wyróżniają. Dowiedz się, co naprawdę robi różnicę.',
+    readingTime: '7 min',
+    category: 'CV i rekrutacja',
+    image: '/gfx/2147650899.jpg',
+    content: [
+      {
+        type: 'paragraph',
+        text: 'Większość kandydatów przed rozmową kwalifikacyjną robi to samo: przegląda stronę firmy, odświeża pamięć o swoim CV i stara się przewidzieć pytania. To dobry start — ale to za mało, żeby naprawdę się wyróżnić. Najlepiej przygotowani kandydaci robią coś więcej.',
+      },
+      {
+        type: 'h2',
+        text: 'Zacznij od zrozumienia firmy, nie tylko jej strony',
+      },
+      {
+        type: 'paragraph',
+        text: 'Strona internetowa firmy to wizytówka — ale nie prawda o niej. Przed rozmową warto sięgnąć głębiej: przeczytać opinie na Gowork lub Glassdoor, sprawdzić profil LinkedIn firmy i rekrutera, poszukać artykułów czy wywiadów z jej liderami. Chodzi o to, żebyś na rozmowie mógł/mogła mówić o konkretach, a nie ogólnikach.',
+      },
+      {
+        type: 'h2',
+        text: 'Przygotuj swoje odpowiedzi metodą STAR',
+      },
+      {
+        type: 'paragraph',
+        text: 'Metoda STAR (Sytuacja, Zadanie, Akcja, Rezultat) to sposób na konkretne i przekonujące odpowiedzi na pytania behawioralne. Zamiast "jestem dobry/dobra w zarządzaniu projektami" — opowiedz o konkretnym projekcie, wyzwaniu, działaniu i efekcie. Rekruterzy zapamiętują historię, nie puste deklaracje.',
+      },
+      {
+        type: 'list',
+        items: [
+          'Przygotuj 5–7 historii z doświadczenia zawodowego w formacie STAR',
+          'Sprawdź wymagania ogłoszenia i dopasuj historie do kluczowych kompetencji',
+          'Przygotuj pytania do rekrutera — to sygnał zaangażowania',
+          'Przećwicz na głos — nie w głowie, ale naprawdę mówiąc',
+          'Zadbaj o logistykę — dojazd, strój, sprzęt przy rozmowie online',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Jak odpowiadać na pytanie "Opowiedz o sobie"?',
+      },
+      {
+        type: 'paragraph',
+        text: 'To najczęstsze pytanie otwierające i jedno z najmniej przygotowywanych. Twoja odpowiedź powinna trwać 2–3 minuty i być zbudowana jak historia: skąd przyszedłem/przyszłam, co robiłem/robiłam, dokąd zmierzam i dlaczego właśnie ta firma i rola. Nie recytuj CV — opowiedz swoją narrację zawodową.',
+      },
+      {
+        type: 'h2',
+        text: 'Najczęstsze błędy kandydatów',
+      },
+      {
+        type: 'paragraph',
+        text: 'Zbyt ogólne odpowiedzi, mówienie źle o poprzednim pracodawcy, brak pytań na koniec rozmowy, nieprzygotowanie na pytanie o oczekiwania finansowe — to błędy, które obniżają ocenę nawet dobrych kandydatów. Pamiętaj: rozmowa kwalifikacyjna to nie egzamin — to dwustronna rozmowa. Ty też sprawdzasz, czy chcesz tu pracować.',
+      },
+    ],
+  },
+  {
+    slug: 'trudne-relacje-w-pracy',
+    title: 'Trudne relacje w pracy: kiedy środowisko zawodowe szkodzi Twojemu dobrostanowi',
+    date: '19 listopada 2025',
+    dateISO: '2025-11-19',
+    excerpt:
+      'Toksyczne środowisko pracy to jeden z głównych powodów wypalenia zawodowego i rezygnacji z dobrej kariery. Dowiedz się, jak rozpoznać problem i co z nim zrobić.',
+    readingTime: '6 min',
+    category: 'Wypalenie zawodowe',
+    image: '/gfx/2149719323.jpg',
+    content: [
+      {
+        type: 'paragraph',
+        text: 'Siedzisz przy biurku i obserwujesz, jak współpracownicy cieszą się z sukcesu, którego Ty nie czujesz. Nie wiesz, dlaczego jesteś pomijana/pomijany w rozmowach, projektach, decyzjach. Może to nie jest "coś poważnego" — ale odbija się na Tobie każdego dnia. Trudne relacje w pracy są prawdziwym problemem, którego nie warto bagatelizować.',
+      },
+      {
+        type: 'h2',
+        text: 'Czym są toksyczne relacje zawodowe?',
+      },
+      {
+        type: 'paragraph',
+        text: 'Toksyczność w miejscu pracy nie zawsze oznacza krzyk czy jawną agresję. Często jest subtelna: pomijanie w komunikacji, przypisywanie sobie cudzych zasług, podważanie kompetencji, wykluczenie z nieformalnych relacji, brak wsparcia w trudnych sytuacjach. Takie zachowania — nawet jeśli nie są intencjonalne — kumulują się i prowadzą do wypalenia.',
+      },
+      {
+        type: 'h2',
+        text: 'Sygnały, że środowisko pracy Ci szkodzi',
+      },
+      {
+        type: 'list',
+        items: [
+          'Czujesz się pomijany/a lub niewidzialny/a w zespole',
+          'Boisz się zabierać głos na spotkaniach',
+          'Po pracy potrzebujesz czasu, żeby "dojść do siebie"',
+          'Twoje sukcesy są ignorowane lub umniejszane',
+          'Czujesz napięcie lub lęk na myśl o przyjściu do pracy',
+          'Relacje zawodowe wpływają negatywnie na Twoje życie prywatne',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Co możesz zrobić?',
+      },
+      {
+        type: 'paragraph',
+        text: 'Pierwszym krokiem jest nazwanie problemu — bez minimalizowania go ("inni mają gorzej") ani katastrofizowania. Zastanów się, czy to relacja z konkretną osobą, kultura całego zespołu, czy struktura organizacji. Od tego zależy, jakie działania mają sens.',
+      },
+      {
+        type: 'paragraph',
+        text: 'Jeśli problem dotyczy jednej osoby — czasem warto podjąć bezpośrednią rozmowę lub skorzystać z pośrednictwa przełożonego czy HR. Jeśli jednak toksyczność jest wbudowana w kulturę organizacji, rozmowy wewnętrzne rzadko cokolwiek zmieniają. W takim przypadku warto poważnie rozważyć zmianę środowiska.',
+      },
+      {
+        type: 'h2',
+        text: 'Kiedy odejście jest najlepszą decyzją?',
+      },
+      {
+        type: 'paragraph',
+        text: 'Odejście z pracy z powodu toksycznego środowiska to nie porażka — to decyzja o ochronie swojego zdrowia psychicznego. Trwanie w miejscu, które systematycznie obniża Twoje poczucie wartości i pochłania energię, ma realne koszty — zawodowe i osobiste. Praca z konsultantką kariery może pomóc Ci ocenić sytuację na chłodno i zaplanować bezpieczne wyjście.',
+      },
+    ],
+  },
+  {
+    slug: 'rozmowa-kwalifikacyjna-bez-stresu',
+    title: 'Rozmowa kwalifikacyjna bez stresu – jak wypaść pewnie i przekonać rekrutera',
+    date: '26 listopada 2025',
+    dateISO: '2025-11-26',
+    excerpt:
+      'Stres przed rozmową kwalifikacyjną jest naturalny — ale można go skutecznie oswoić. Poznaj strategie, które pomogą Ci wypaść pewnie i zaprezentować się z najlepszej strony.',
+    readingTime: '6 min',
+    category: 'CV i rekrutacja',
+    image: '/gfx/13153.jpg',
+    content: [
+      {
+        type: 'paragraph',
+        text: 'Zaproszenie na rozmowę kwalifikacyjną powinno być powodem do radości — w końcu ktoś zauważył Twoje CV i chce Cię poznać. A mimo to dla wielu osób to moment, który wyzwala paraliżujący stres. Dobra wiadomość: stres nie jest problemem. Problem pojawia się tylko wtedy, gdy nie wiesz, jak go wykorzystać.',
+      },
+      {
+        type: 'h2',
+        text: 'Skąd bierze się stres przed rozmową?',
+      },
+      {
+        type: 'paragraph',
+        text: 'Najczęściej stres wynika z poczucia, że jesteśmy oceniani — i że możemy nie wypaść wystarczająco dobrze. To naturalna reakcja na sytuację, w której stawką jest coś ważnego. Problemem nie jest sama emocja, ale przekonanie, że stres nas "zdradza" albo że świadczy o naszych brakach. Nic z tych rzeczy.',
+      },
+      {
+        type: 'h2',
+        text: 'Jak się przygotować, żeby czuć się pewnie?',
+      },
+      {
+        type: 'paragraph',
+        text: 'Pewność siebie na rozmowie buduje się przede wszystkim przez dobre przygotowanie. Kiedy wiesz, co chcesz powiedzieć i masz gotowe konkretne przykłady ze swojej pracy, stres naturalnie maleje — bo nie musisz wymyślać odpowiedzi na bieżąco. Przećwicz rozmowę na głos — z kimś bliskim lub przed lustrem.',
+      },
+      {
+        type: 'list',
+        items: [
+          'Przygotuj konkretne przykłady osiągnięć w formacie STAR',
+          'Przećwicz odpowiedź na "Opowiedz o sobie" — max 3 minuty',
+          'Przemyśl, dlaczego chcesz pracować w tej firmie i na tym stanowisku',
+          'Przygotuj pytania do rekrutera — pokażą Twoje zaangażowanie',
+          'Zadbaj o komfort fizyczny: sen, jedzenie, odpowiedni strój',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Techniki radzenia sobie ze stresem w trakcie rozmowy',
+      },
+      {
+        type: 'paragraph',
+        text: 'Jeśli poczujesz stres w trakcie rozmowy — zatrzymaj się. Dosłownie. Krótka pauza przed odpowiedzią jest oznaką przemyślenia, nie słabości. Możesz też poprosić o chwilę: "To ważne pytanie, czy mogę przez chwilę je przemyśleć?" Rekruterzy cenią refleksyjność.',
+      },
+      {
+        type: 'h2',
+        text: 'Pamiętaj: rozmowa jest obustronna',
+      },
+      {
+        type: 'paragraph',
+        text: 'Zmiana perspektywy działa cuda: nie przychodzisz na przesłuchanie — przychodzisz sprawdzić, czy ta firma i rola są dla Ciebie odpowiednie. Ty też oceniasz. To zmienia dynamikę rozmowy i naturalnie obniża poziom stresu. Kiedy traktujesz rozmowę jako spotkanie dwóch stron, a nie egzamin, dużo łatwiej być sobą.',
+      },
+    ],
+  },
+  {
+    slug: 'pierwsze-tygodnie-w-nowej-pracy',
+    title: 'Pierwsze tygodnie w nowej pracy: jak szybko odnaleźć się i zrobić dobre wrażenie',
+    date: '3 grudnia 2025',
+    dateISO: '2025-12-03',
+    excerpt:
+      'Zaczynasz nową pracę i chcesz jak najlepiej wykorzystać ten czas? Pierwsze tygodnie mają ogromne znaczenie — dowiedz się, jak je dobrze zaplanować i wejść pewnie w nową rolę.',
+    readingTime: '5 min',
+    category: 'Zmiana pracy',
+    image: '/gfx/2148347260.jpg',
+    content: [
+      {
+        type: 'paragraph',
+        text: 'Zdobycie nowej pracy to wielki sukces. Ale zaraz po podpisaniu umowy zaczyna się nowe wyzwanie: jak dobrze wejść w nowe środowisko, zrozumieć kulturę organizacji i jak najszybciej zacząć wnosić wartość? Pierwsze tygodnie są kluczowe — i warto je zaplanować świadomie.',
+      },
+      {
+        type: 'h2',
+        text: 'Słuchaj więcej niż mówisz',
+      },
+      {
+        type: 'paragraph',
+        text: 'Jednym z najważniejszych — i najtrudniejszych — zadań w nowej pracy jest opanowanie pokusa pokazania się. Nawet jeśli masz duże doświadczenie i świetne pomysły, pierwsze tygodnie powinny być przede wszystkim czasem obserwacji i słuchania. Zanim zaproponujesz zmiany, zrozum, dlaczego rzeczy działają tak, jak działają.',
+      },
+      {
+        type: 'h2',
+        text: 'Buduj relacje od pierwszych dni',
+      },
+      {
+        type: 'paragraph',
+        text: 'Relacje w pracy buduje się latami — ale fundamenty kładziesz w pierwszych tygodniach. Nie czekaj, aż ktoś do Ciebie podejdzie. Przedstawiaj się, pytaj o projekty, zapraszaj współpracowników na kawę. Nie chodzi o sztuczne budowanie networku — chodzi o autentyczne zainteresowanie ludźmi, z którymi będziesz pracować.',
+      },
+      {
+        type: 'list',
+        items: [
+          'Poznaj osoby kluczowe dla Twojej roli — nie tylko przełożonych',
+          'Pytaj zamiast zakładać — nikt nie oczekuje, że od razu wszystko wiesz',
+          'Proś o feedback po pierwszym miesiącu — pokaże, że zależy Ci na rozwoju',
+          'Zadbaj o zrozumienie celów zespołu, nie tylko swoich zadań',
+          'Notuj — dużo informacji przychodzi naraz, pamięć zawodzi',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Jak radzić sobie z syndromem nowego?',
+      },
+      {
+        type: 'paragraph',
+        text: 'Poczucie, że wszyscy wiedzą więcej, że popełniasz błędy i że może to była zła decyzja — to bardzo powszechne odczucia w pierwszych tygodniach nowej pracy. To nie sygnał, że jesteś w złym miejscu. To naturalny etap wchodzenia w nową rolę. Daj sobie czas.',
+      },
+      {
+        type: 'h2',
+        text: 'Pierwsze 90 dni jako projekt',
+      },
+      {
+        type: 'paragraph',
+        text: 'Warto potraktować pierwsze 90 dni jak projekt: z celami, kamieniami milowymi i regularną refleksją. Co chcę wiedzieć po pierwszym miesiącu? Z kim chcę zbudować relacje? Jakie pierwsze wyniki chcę osiągnąć? Taki plan nadaje kierunek i daje poczucie sprawczości — nawet w chaosie wdrożenia.',
       },
     ],
   },

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowUpRight, Clock, Search } from 'lucide-react'
 import FadeInSection from '@/components/FadeInSection'
 import { blogPosts } from '@/lib/blog-data'
@@ -60,14 +61,24 @@ export default function BlogPage() {
                         href={`/blog/${post.slug}`}
                         className="group block bg-white border border-warm rounded-2xl overflow-hidden hover:shadow-md transition-all duration-300 h-full"
                       >
-                        {/* Image placeholder */}
-                        {/* TODO: Zamień na prawdziwe zdjęcie */}
-                        <div className="bg-beige aspect-[16/9] flex items-center justify-center relative">
-                          <span className="text-xs font-semibold uppercase tracking-widest text-gold/50">
-                            {post.category}
-                          </span>
-                          <div className="absolute inset-0 bg-gradient-to-br from-warm/30 to-beige/60" />
-                        </div>
+                        {post.image ? (
+                          <div className="aspect-[16/9] relative overflow-hidden">
+                            <Image
+                              src={post.image}
+                              alt={post.title}
+                              fill
+                              className="object-cover transition-transform duration-500 group-hover:scale-105"
+                              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                            />
+                          </div>
+                        ) : (
+                          <div className="bg-beige aspect-[16/9] flex items-center justify-center relative">
+                            <span className="text-xs font-semibold uppercase tracking-widest text-gold/50">
+                              {post.category}
+                            </span>
+                            <div className="absolute inset-0 bg-gradient-to-br from-warm/30 to-beige/60" />
+                          </div>
+                        )}
 
                         <div className="p-6">
                           <div className="flex items-center gap-3 mb-3">

@@ -162,13 +162,25 @@ export default function BlogPostPage({ params }: PageProps) {
 
             {/* Article */}
             <article className="lg:col-span-2">
-              {/* TODO: Zamień na prawdziwe zdjęcie główne artykułu */}
-              <div className="bg-beige rounded-2xl aspect-[16/9] flex items-center justify-center mb-10 relative overflow-hidden">
-                <span className="text-sm font-medium text-gray-400 relative z-10">
-                  Zdjęcie do artykułu
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-br from-warm/40 to-beige/60" />
-              </div>
+              {post.image ? (
+                <div className="rounded-2xl aspect-[16/9] relative overflow-hidden mb-10">
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 66vw"
+                    priority
+                  />
+                </div>
+              ) : (
+                <div className="bg-beige rounded-2xl aspect-[16/9] flex items-center justify-center mb-10 relative overflow-hidden">
+                  <span className="text-sm font-medium text-gray-400 relative z-10">
+                    Zdjęcie do artykułu
+                  </span>
+                  <div className="absolute inset-0 bg-gradient-to-br from-warm/40 to-beige/60" />
+                </div>
+              )}
 
               <FadeInSection>
                 <div className="prose-content">
