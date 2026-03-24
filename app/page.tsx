@@ -493,12 +493,24 @@ export default function HomePage() {
                   href={`/blog/${post.slug}`}
                   className="group block bg-beige rounded-2xl overflow-hidden hover:shadow-md transition-all duration-300 h-full"
                 >
-                  <div className="bg-warm aspect-[16/9] flex items-center justify-center relative">
-                    <span className="text-xs font-semibold uppercase tracking-widest text-gold/60 relative z-10">
-                      {post.category}
-                    </span>
-                    <div className="absolute inset-0 bg-gradient-to-br from-warm/30 to-beige" />
-                  </div>
+                  {post.image ? (
+                    <div className="aspect-[16/9] relative overflow-hidden">
+                      <Image
+                        src={post.image}
+                        alt={post.title}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                      />
+                    </div>
+                  ) : (
+                    <div className="bg-warm aspect-[16/9] flex items-center justify-center relative">
+                      <span className="text-xs font-semibold uppercase tracking-widest text-gold/60 relative z-10">
+                        {post.category}
+                      </span>
+                      <div className="absolute inset-0 bg-gradient-to-br from-warm/30 to-beige" />
+                    </div>
+                  )}
                   <div className="p-6">
                     <span className="text-xs font-medium text-brand-blue bg-brand-blue/10 px-3 py-1 rounded-full">
                       {post.category}
