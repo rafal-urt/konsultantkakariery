@@ -197,7 +197,7 @@ export default async function BlogPostPage({ params }: PageProps) {
               <div className="flex items-center gap-3 pb-10 border-b border-warm">
                 <div className="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
                   <Image
-                    src="/gfx/ewelinadyjak_3_30wys.png"
+                    src="/gfx/ewelina_7.jpg"
                     alt="Ewelina Dyjak"
                     fill
                     className="object-cover object-top"
@@ -255,7 +255,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                   <div className="bg-beige rounded-2xl p-7 flex items-start gap-6">
                     <div className="relative w-20 h-20 rounded-2xl overflow-hidden flex-shrink-0">
                       <Image
-                        src="/gfx/ewelinadyjak_3_30wys.png"
+                        src="/gfx/ewelina_7.jpg"
                         alt="Ewelina Dyjak"
                         fill
                         className="object-cover object-top"
