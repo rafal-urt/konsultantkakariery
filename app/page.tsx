@@ -1,146 +1,130 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Compass, Sparkles, ArrowUpRight, Mail, Phone, MapPin, Clock, Facebook, Instagram } from 'lucide-react'
 import Image from 'next/image'
+import {
+  CheckCircle,
+  ArrowRight,
+  MessageSquare,
+  Layers,
+  Briefcase,
+  MapPin,
+  Phone,
+  Mail,
+} from 'lucide-react'
 import FadeInSection from '@/components/FadeInSection'
 import TestimonialsCarousel from '@/components/TestimonialsCarousel'
 import StatsCounter from '@/components/StatsCounter'
+import { blogPosts } from '@/lib/blog-data'
 
 export const metadata: Metadata = {
-  title: 'Konsultantka Kariery — Ewelina Dyjak | Doradztwo zawodowe',
+  title: 'Konsultantka Kariery — Ewelina Dyjak | Lublin & online',
   description:
-    'Pomagam w świadomym zarządzaniu karierą, budowaniu pewności siebie i podejmowaniu trafnych decyzji zawodowych. Konsultacje kariery online i w Lublinie.',
-  keywords: [
-    'konsultantka kariery',
-    'doradztwo zawodowe',
-    'coaching kariery',
-    'zmiana pracy',
-    'przebranżowienie',
-    'pewność siebie w karierze',
-    'Lublin',
-  ],
+    'Pomagam w świadomej zmianie zawodowej, przebranżowieniu i budowaniu pewności siebie w karierze. Konsultacje online w całej Polsce i stacjonarnie w Lublinie.',
   openGraph: {
     title: 'Konsultantka Kariery — Ewelina Dyjak',
-    description: 'Uczę pewności siebie w zarządzaniu swoją karierą',
+    description:
+      'Świadoma zmiana zawodowa, przebranżowienie, pewność siebie w karierze. Konsultacje online w całej Polsce.',
     url: 'https://konsultantkakariery.pl',
-    siteName: 'Konsultantka Kariery',
-    locale: 'pl_PL',
-    type: 'website',
   },
+  alternates: { canonical: 'https://konsultantkakariery.pl' },
 }
 
-const blogPosts = [
-  {
-    slug: 'zmiana-pracy-bez-chaosu',
-    title: 'Zmiana pracy bez chaosu – od czego naprawdę warto zacząć',
-    date: '28 października 2025',
-    excerpt:
-      'Chcesz zmienić pracę, ale nie wiesz od czego zacząć? Dowiedz się, jak krok po kroku zaplanować zmianę zawodową bez niepotrzebnego stresu.',
-  },
-  {
-    slug: 'gdy-praca-przestaje-pasowac',
-    title: 'Gdy praca przestaje pasować: sygnały, których nie warto ignorować',
-    date: '28 października 2025',
-    excerpt:
-      'Czy Twoja praca naprawdę Ci służy? Poznaj sygnały — fizyczne, emocjonalne i zawodowe — które mogą wskazywać, że czas na zmianę.',
-  },
-  {
-    slug: 'pewnosc-siebie-w-karierze',
-    title: 'Pewność siebie w karierze – jak ją budować w oparciu o fakty, nie presję',
-    date: '28 października 2025',
-    excerpt:
-      'Pewność siebie w pracy to nie cecha wrodzona, a umiejętność. Dowiedz się, jak ją budować na solidnych fundamentach.',
-  },
-  {
-    slug: 'swiadome-decyzje-zawodowe',
-    title: 'Świadome decyzje zawodowe: jak wybrać kierunek zgodny ze sobą',
-    date: '28 października 2025',
-    excerpt:
-      'Jak podejmować decyzje zawodowe, które są naprawdę Twoje? Odkryj metodę opartą na wartościach, umiejętnościach i stylu życia.',
-  },
-]
-
-const pillars = [
-  {
-    icon: Compass,
-    title: 'Świadome decyzje zawodowe',
-    description:
-      'Pomagam uporządkować myśli, nazwać potrzeby i podjąć decyzje zawodowe w zgodzie ze sobą.',
-  },
-  {
-    icon: Sparkles,
-    title: 'Pewność siebie i kompetencje',
-    description:
-      'Wzmacniam wiarę w siebie i uczę, jak mówić o swoich umiejętnościach z przekonaniem.',
-  },
-  {
-    icon: ArrowUpRight,
-    title: 'Zmiana i rozwój kariery',
-    description:
-      'Przeprowadzam przez proces zmiany pracy, branży lub powrotu na rynek pracy.',
-  },
+const painPoints = [
+  'Czujesz, że Twoja praca Cię nie satysfakcjonuje, ale nie wiesz, co chcesz robić',
+  'Myślisz o zmianie pracy lub branży, ale boisz się, że to za duże ryzyko',
+  'Wracasz na rynek pracy po przerwie i nie wiesz, jak się odnaleźć',
+  'Masz dość poniedziałkowego lęku i poczucia, że marnujesz swój potencjał',
+  'Brakuje Ci pewności siebie podczas rozmów kwalifikacyjnych i negocjacji',
+  'Chcesz wreszcie mieć plan — nie tylko marzenia',
 ]
 
 const processSteps = [
   {
     number: '01',
-    title: 'Zatrzymujemy się i porządkujemy Twoją sytuację',
+    title: 'Bezpłatna rozmowa wstępna',
     description:
-      'Przyglądamy się Twojej aktualnej sytuacji zawodowej bez ocen i presji. Pomagam nazwać to, co naprawdę Cię blokuje, co Cię męczy i czego w pracy już nie chcesz. To moment, w którym chaos zamienia się w pierwszą klarowność.',
-    image: '/gfx/ewelina_5.jpg',
+      'Zaczynamy od 30-minutowej rozmowy, podczas której poznaję Twoją sytuację i sprawdzamy, czy możemy razem pracować. Bez zobowiązań, bez presji.',
   },
   {
     number: '02',
-    title: 'Odkrywamy kierunek i Twoje zasoby',
+    title: 'Diagnoza i plan działania',
     description:
-      'Wspólnie identyfikujemy Twoje mocne strony, kompetencje i wartości, które mają realne znaczenie na rynku pracy. Sprawdzamy możliwe kierunki rozwoju i wybieramy te, które są zgodne z Tobą i Twoim stylem życia. Tu zaczyna się odzyskiwanie pewności siebie.',
-    image: '/gfx/ewelina_6.jpg',
+      'Na pierwszych sesjach głębiej analizujemy Twoje mocne strony, wartości i cele. Razem budujemy konkretny plan — krok po kroku.',
   },
   {
     number: '03',
-    title: 'Przekładamy decyzje na konkretne działania',
+    title: 'Działanie i zmiana',
     description:
-      'Tworzymy realny plan dalszych kroków — bez skoków na głęboką wodę i bez chaosu. Pokazuję, jak działać mądrze: jak szukać pracy, jak się przygotować do rozmów i jak świadomie zarządzać swoją karierą. Zostajesz z planem, który możesz wdrożyć tu i teraz.',
-    image: '/gfx/ewelina_7.jpg',
+      'Pracujemy systematycznie, aż osiągniesz cel. Każda sesja to konkretne narzędzia i ćwiczenia, które możesz stosować natychmiast.',
+  },
+]
+
+const services = [
+  {
+    icon: MessageSquare,
+    title: 'Jednorazowa konsultacja kariery',
+    description:
+      'Idealna na start lub konkretny problem — rozmowa o zmianie pracy, CV, rozmowie kwalifikacyjnej lub kierunku rozwoju.',
+    href: '/uslugi',
+    featured: false,
+  },
+  {
+    icon: Layers,
+    title: 'Pakiet 5 sesji rozwoju kariery',
+    description:
+      'Kompleksowa praca nad zmianą zawodową lub przebranżowieniem. Diagnoza → plan → działanie. Najpopularniejszy wybór moich klientek i klientów.',
+    href: '/uslugi',
+    featured: true,
+  },
+  {
+    icon: Briefcase,
+    title: 'Przygotowanie do zmiany',
+    description:
+      'Skoncentrowany program dla osób, które mają już cel, ale potrzebują wsparcia w przygotowaniu do rozmów kwalifikacyjnych i negocjacji.',
+    href: '/uslugi',
+    featured: false,
   },
 ]
 
 export default function HomePage() {
+  const previewPosts = blogPosts.slice(0, 3)
+
   return (
     <>
       {/* ===== HERO ===== */}
-      <section className="bg-cream section-padding overflow-hidden">
+      <section className="bg-beige section-padding">
         <div className="container-width">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            {/* Text */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <FadeInSection direction="left">
               <div className="max-w-xl">
-                <p className="section-label">Konsultantka Kariery</p>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1A1A1A] leading-tight mb-6">
-                  Uczę pewności siebie w zarządzaniu{' '}
-                  <span className="text-gold">swoją karierą</span>
+                <p className="section-label">Konsultantka Kariery — Lublin & online</p>
+                <h1 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-bold text-[#1A1A1A] leading-tight mb-6">
+                  Twoja kariera powinna dawać Ci energię —{' '}
+                  <span className="text-gold">nie wyczerpywać</span>
                 </h1>
-                <p className="text-gray-500 text-lg leading-relaxed mb-10">
-                  Pomagam w świadomym zarządzaniu karierą, budowaniu pewności siebie
-                  i podejmowaniu trafnych decyzji zawodowych. Wspieram w momentach
-                  zmiany i rozwoju, pomagając uporządkować kierunek, wzmocnić pozycję
-                  zawodową i działać w zgodzie z własnymi wartościami.
+                <p className="text-gray-500 text-lg leading-relaxed mb-8">
+                  Pomagam osobom w świadomej zmianie zawodowej, odkryciu mocnych stron
+                  i odbudowaniu pewności siebie. Konsultacje indywidualne online
+                  w całej Polsce i stacjonarnie w Lublinie.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link href="/kontakt" className="btn-primary text-center">
-                    Umów konsultację
+                    Umów bezpłatną rozmowę
                   </Link>
                   <Link href="/uslugi" className="btn-outline text-center">
-                    Zobacz usługi
+                    Zobacz ofertę
                   </Link>
                 </div>
+                <p className="text-sm text-gray-400 mt-4 flex items-center gap-2">
+                  <CheckCircle size={15} className="text-gold flex-shrink-0" />
+                  Pierwsza rozmowa jest bezpłatna i niezobowiązująca
+                </p>
               </div>
             </FadeInSection>
 
-            {/* Image */}
-            <FadeInSection direction="right" delay={0.2}>
-              <div className="relative">
-                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden w-full max-w-sm mx-auto lg:max-w-none">
+            <FadeInSection direction="right" delay={0.15}>
+              <div className="relative w-full max-w-sm mx-auto lg:max-w-none">
+                <div className="relative aspect-[4/3] lg:aspect-[3/4] rounded-2xl overflow-hidden">
                   <Image
                     src="/gfx/ewelina_1.jpg"
                     alt="Ewelina Dyjak — Konsultantka Kariery"
@@ -150,123 +134,97 @@ export default function HomePage() {
                     priority
                   />
                 </div>
-                {/* Decorative element */}
-                <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-gold/10 rounded-2xl -z-10" />
-                <div className="absolute -top-4 -right-4 w-16 h-16 bg-beige rounded-full -z-10" />
+                <div className="absolute -bottom-4 -left-4 lg:-left-8 bg-white rounded-2xl shadow-lg p-4 flex items-center gap-3">
+                  <div className="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <CheckCircle size={20} className="text-gold" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-gray-400 leading-none mb-0.5">Doświadczenie</p>
+                    <p className="text-sm font-semibold text-[#1A1A1A] leading-none">
+                      7+ lat i 1000+ godzin sesji
+                    </p>
+                  </div>
+                </div>
               </div>
             </FadeInSection>
           </div>
         </div>
       </section>
 
-      {/* ===== KIM JESTEM ===== */}
+      {/* ===== PAIN POINTS ===== */}
       <section className="bg-white section-padding">
         <div className="container-width">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            {/* Image left */}
-            <FadeInSection direction="left">
-              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden w-full">
-                <Image
-                  src="/gfx/ewelina_2.jpg"
-                  alt="Ewelina Dyjak podczas konsultacji kariery"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-              </div>
-            </FadeInSection>
-
-            {/* Text right */}
-            <FadeInSection direction="right" delay={0.1}>
-              <div>
-                <p className="section-label">Kim jestem</p>
-                <h2 className="text-3xl lg:text-4xl font-bold text-[#1A1A1A] mb-6 leading-tight">
-                  Pomagam odnaleźć kierunek w zmianie zawodowej
-                </h2>
-                <p className="text-gray-500 leading-relaxed mb-8 text-lg">
-                  Towarzyszę osobom, które chcą świadomie zarządzać swoją karierą
-                  i podejmować decyzje zawodowe w zgodzie ze sobą. Wspieram w
-                  porządkowaniu myśli, odkrywaniu mocnych stron i budowaniu pewności
-                  siebie potrzebnej do realnej zmiany.
-                </p>
-                <Link href="/uslugi" className="btn-primary inline-block">
-                  Zobacz usługi
-                </Link>
-              </div>
-            </FadeInSection>
-          </div>
-        </div>
-      </section>
-
-      {/* ===== 3 FILARY ===== */}
-      <section className="bg-beige section-padding">
-        <div className="container-width">
-          <FadeInSection className="text-center mb-16">
-            <p className="section-label">Jak pomagam</p>
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1A1A1A]">
-              Trzy obszary wsparcia
+          <FadeInSection className="text-center mb-12">
+            <p className="section-label">Rozpoznajesz to?</p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1A1A1A] max-w-2xl mx-auto">
+              Jeśli masz dość tkwienia w miejscu — to dobrze trafiłeś/aś
             </h2>
           </FadeInSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {pillars.map((pillar, index) => {
-              const Icon = pillar.icon
-              return (
-                <FadeInSection key={index} delay={index * 0.15}>
-                  <div className="card h-full">
-                    <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-6">
-                      <Icon size={24} className="text-gold" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-[#1A1A1A] mb-4">
-                      {pillar.title}
-                    </h3>
-                    <p className="text-gray-500 leading-relaxed">{pillar.description}</p>
-                  </div>
-                </FadeInSection>
-              )
-            })}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+            {painPoints.map((point, index) => (
+              <FadeInSection key={index} delay={index * 0.07}>
+                <div className="flex items-start gap-3 bg-beige rounded-xl p-5 h-full">
+                  <ArrowRight size={18} className="text-gold flex-shrink-0 mt-0.5" />
+                  <p className="text-gray-600 text-sm leading-relaxed">{point}</p>
+                </div>
+              </FadeInSection>
+            ))}
           </div>
+
+          <FadeInSection>
+            <p className="text-center text-gray-500 text-lg max-w-2xl mx-auto">
+              Nie musisz sam/sama przez to przechodzić. Pracuję z osobami dokładnie
+              w takiej sytuacji — i razem dochodzimy do konkretnych odpowiedzi i działań.
+            </p>
+          </FadeInSection>
         </div>
       </section>
 
-      {/* ===== MOJA PASJA ===== */}
-      <section className="bg-cream section-padding">
+      {/* ===== O MNIE / WIARYGODNOŚĆ ===== */}
+      <section className="bg-beige section-padding">
         <div className="container-width">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            {/* Text */}
             <FadeInSection direction="left">
-              <div>
-                <p className="section-label">Moja misja</p>
-                <h2 className="text-3xl lg:text-4xl font-bold text-[#1A1A1A] mb-6 leading-tight">
-                  Wspieranie innych w procesie zmian zawodowych jest moją pasją
-                </h2>
-                <p className="text-gray-500 leading-relaxed mb-6 text-lg">
-                  Pomagam osobom, które chcą świadomie zarządzać swoją karierą,
-                  odzyskać pewność siebie i podjąć decyzje zawodowe zgodne z ich
-                  wartościami, doświadczeniem i stylem życia.
-                </p>
-                <p className="text-[#1A1A1A] font-semibold leading-relaxed mb-8">
-                  Jestem konsultantką kariery i coachem kariery z wieloletnim
-                  doświadczeniem w pracy z osobami na różnych etapach życia
-                  zawodowego. Pomagam odkrywać mocne strony, porządkować cele
-                  i budować pewność siebie potrzebną do zmiany.
-                </p>
-                <Link href="/o-mnie" className="btn-primary inline-block">
-                  O mnie
-                </Link>
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+                <Image
+                  src="/gfx/ewelina_2.jpg"
+                  alt="Ewelina Dyjak — konsultantka kariery podczas sesji"
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
               </div>
             </FadeInSection>
 
-            {/* Image */}
             <FadeInSection direction="right" delay={0.1}>
-              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden w-full">
-                <Image
-                  src="/gfx/ewelina_3.jpg"
-                  alt="Ewelina Dyjak — pasja do pracy z ludźmi w zmianie kariery"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
+              <div>
+                <p className="section-label">Kim jestem</p>
+                <h2 className="text-3xl lg:text-4xl font-bold text-[#1A1A1A] mb-6">
+                  Ewelina Dyjak —{' '}
+                  <span className="text-gold">konsultantka kariery i coach</span>
+                </h2>
+                <div className="space-y-4 text-gray-500 text-base leading-relaxed mb-8">
+                  <p>
+                    Od ponad 7 lat pomagam ludziom odnaleźć się w zawodowym życiu.
+                    Przeprowadziłam ponad 1000 godzin indywidualnych konsultacji
+                    z osobami na różnych etapach kariery — od pierwszej zmiany pracy,
+                    przez wypalenie zawodowe, aż po powrót na rynek po dłuższej przerwie.
+                  </p>
+                  <p>
+                    Łączę narzędzia coachingowe z realną wiedzą o rynku pracy.
+                    Nie pracuję na teorii — pracuję na konkretach. Po naszych sesjach
+                    wychodzisz z planem, nie tylko z lepszym samopoczuciem.
+                  </p>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-500 mb-8">
+                  <MapPin size={15} className="text-gold flex-shrink-0" />
+                  Lublin | Konsultacje online w całej Polsce
+                </div>
+                <Link href="/o-mnie" className="btn-outline inline-flex items-center gap-2">
+                  Poznaj mnie bliżej
+                  <ArrowRight size={16} />
+                </Link>
               </div>
             </FadeInSection>
           </div>
@@ -274,17 +232,9 @@ export default function HomePage() {
       </section>
 
       {/* ===== STATYSTYKI ===== */}
-      <section className="bg-beige section-padding">
+      <section className="bg-brand-blue section-padding">
         <div className="container-width">
-          <FadeInSection className="text-center mb-16">
-            <p className="section-label">W liczbach</p>
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1A1A1A]">
-              Doświadczenie, które działa
-            </h2>
-          </FadeInSection>
-          <FadeInSection delay={0.1}>
-            <StatsCounter />
-          </FadeInSection>
+          <StatsCounter />
         </div>
       </section>
 
@@ -293,251 +243,281 @@ export default function HomePage() {
         <div className="container-width">
           <FadeInSection className="text-center mb-16">
             <p className="section-label">Jak pracuję</p>
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1A1A1A]">
-              Świadoma zmiana kariery to proces
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1A1A1A] max-w-xl mx-auto">
+              Prosta droga od „nie wiem" do konkretnego planu
             </h2>
           </FadeInSection>
 
-          <div className="space-y-20 lg:space-y-28">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {processSteps.map((step, index) => (
-              <FadeInSection key={index} delay={0.1}>
-                <div
-                  className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-                    index % 2 === 1 ? 'lg:[direction:rtl]' : ''
-                  }`}
-                >
-                  <div className={index % 2 === 1 ? 'lg:[direction:ltr]' : ''}>
-                    <div className="text-8xl font-bold text-brand-blue/20 leading-none mb-4 select-none">
-                      {step.number}
+              <FadeInSection key={index} delay={index * 0.1}>
+                <div className="relative bg-beige rounded-2xl p-8 h-full">
+                  <span className="text-6xl font-bold text-warm leading-none block mb-6 select-none">
+                    {step.number}
+                  </span>
+                  <h3 className="text-xl font-semibold text-[#1A1A1A] mb-3">
+                    {step.title}
+                  </h3>
+                  <p className="text-gray-500 leading-relaxed text-sm">
+                    {step.description}
+                  </p>
+                  {index < processSteps.length - 1 && (
+                    <div className="hidden md:block absolute -right-4 top-1/2 -translate-y-1/2 z-10">
+                      <ArrowRight size={20} className="text-warm" />
                     </div>
-                    <h3 className="text-2xl font-bold text-[#1A1A1A] mb-4">
-                      {step.title}
-                    </h3>
-                    <p className="text-gray-500 leading-relaxed text-lg">
-                      {step.description}
-                    </p>
-                  </div>
-                  <div className={index % 2 === 1 ? 'lg:[direction:ltr]' : ''}>
-                    <div className="relative aspect-[4/3] rounded-2xl overflow-hidden w-full">
-                      <Image
-                        src={step.image}
-                        alt={`Ewelina Dyjak — etap ${step.number} procesu kariery`}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 1024px) 100vw, 50vw"
-                      />
-                    </div>
-                  </div>
+                  )}
                 </div>
               </FadeInSection>
             ))}
           </div>
+
+          <FadeInSection delay={0.3}>
+            <div className="text-center mt-12">
+              <Link href="/kontakt" className="btn-primary inline-flex items-center gap-2">
+                Zacznijmy od bezpłatnej rozmowy
+                <ArrowRight size={16} />
+              </Link>
+            </div>
+          </FadeInSection>
         </div>
       </section>
 
-      {/* ===== CTA SECTION ===== */}
+      {/* ===== USŁUGI ===== */}
       <section className="bg-beige section-padding">
         <div className="container-width">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <FadeInSection>
-              <div>
-                <p className="section-label">Pierwszy krok</p>
-                <h2 className="text-3xl lg:text-4xl font-bold text-[#1A1A1A] mb-6 leading-tight">
-                  Nie musisz wiedzieć wszystkiego od razu
-                </h2>
-                <p className="text-gray-500 text-lg leading-relaxed mb-4">
-                  Wystarczy, że zrobisz pierwszy krok.
-                </p>
-                <p className="text-gray-500 leading-relaxed mb-10">
-                  Podczas bezpłatnej rozmowy wstępnej przyjrzymy się Twojej sytuacji
-                  i sprawdzimy, jakie formy wsparcia będą dla Ciebie najlepsze.
-                </p>
-                <Link href="/kontakt" className="btn-primary inline-block">
-                  Umów konsultację
-                </Link>
-              </div>
-            </FadeInSection>
-            <FadeInSection direction="right" delay={0.1}>
-              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden w-full">
-                <Image
-                  src="/gfx/ewelina_4.jpg"
-                  alt="Ewelina Dyjak — umów pierwszą konsultację kariery"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-              </div>
-            </FadeInSection>
+          <FadeInSection className="text-center mb-16">
+            <p className="section-label">Oferta</p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1A1A1A]">
+              Wybierz formę współpracy
+            </h2>
+          </FadeInSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {services.map((service, index) => {
+              const Icon = service.icon
+              return (
+                <FadeInSection key={index} delay={index * 0.1}>
+                  <div
+                    className={`card h-full flex flex-col relative ${
+                      service.featured
+                        ? 'border-2 border-gold shadow-lg'
+                        : 'border border-warm'
+                    }`}
+                  >
+                    {service.featured && (
+                      <span className="absolute -top-3 left-6 bg-gold text-white text-xs font-semibold px-4 py-1 rounded-full">
+                        Najpopularniejsze
+                      </span>
+                    )}
+                    <div
+                      className={`w-12 h-12 rounded-xl flex items-center justify-center mb-5 ${
+                        service.featured ? 'bg-gold/10' : 'bg-brand-blue/10'
+                      }`}
+                    >
+                      <Icon
+                        size={22}
+                        className={service.featured ? 'text-gold' : 'text-brand-blue'}
+                      />
+                    </div>
+                    <h3 className="text-lg font-semibold text-[#1A1A1A] mb-3">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-500 text-sm leading-relaxed flex-1 mb-6">
+                      {service.description}
+                    </p>
+                    <Link
+                      href={service.href}
+                      className={`text-sm font-medium flex items-center gap-1.5 group transition-colors duration-200 ${
+                        service.featured ? 'text-gold' : 'text-brand-blue'
+                      }`}
+                    >
+                      Dowiedz się więcej
+                      <ArrowRight
+                        size={14}
+                        className="group-hover:translate-x-0.5 transition-transform duration-200"
+                      />
+                    </Link>
+                  </div>
+                </FadeInSection>
+              )
+            })}
           </div>
+
+          <FadeInSection delay={0.3}>
+            <p className="text-center text-gray-400 text-sm mt-8">
+              Nie jesteś pewien/pewna, który pakiet jest dla Ciebie?{' '}
+              <Link href="/kontakt" className="text-gold hover:underline font-medium">
+                Napisz do mnie
+              </Link>{' '}
+              — pomogę wybrać.
+            </p>
+          </FadeInSection>
         </div>
       </section>
 
       {/* ===== OPINIE ===== */}
       <section className="bg-white section-padding">
         <div className="container-width">
-          <FadeInSection className="text-center mb-16">
-            <p className="section-label">Gwarancja satysfakcji</p>
+          <FadeInSection className="text-center mb-12">
+            <p className="section-label">Opinie klientów</p>
             <h2 className="text-3xl lg:text-4xl font-bold text-[#1A1A1A]">
-              Opinie moich Klientów
+              Co mówią osoby, z którymi pracowałam
             </h2>
           </FadeInSection>
-          <FadeInSection delay={0.1}>
+
+          <FadeInSection>
             <TestimonialsCarousel />
           </FadeInSection>
-          <FadeInSection className="text-center mt-12" delay={0.2}>
-            <Link href="/klienci" className="btn-outline inline-block">
-              Zobacz wszystkie opinie
-            </Link>
+
+          <FadeInSection delay={0.2}>
+            <div className="text-center mt-10">
+              <Link
+                href="/klienci"
+                className="text-brand-blue text-sm font-medium hover:underline inline-flex items-center gap-1"
+              >
+                Przeczytaj wszystkie opinie
+                <ArrowRight size={14} />
+              </Link>
+            </div>
           </FadeInSection>
         </div>
       </section>
 
-      {/* ===== KONTAKT MINI ===== */}
-      <section className="bg-beige section-padding">
+      {/* ===== FINALNE CTA ===== */}
+      <section className="bg-brand-blue section-padding">
         <div className="container-width">
-          <FadeInSection className="text-center mb-16">
-            <p className="section-label">Kontakt</p>
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1A1A1A]">
-              Odezwij się do mnie
-            </h2>
-          </FadeInSection>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <FadeInSection direction="left">
+              <div>
+                <h2 className="text-3xl lg:text-4xl font-bold text-white mb-5">
+                  Gotowy/a na zmianę?
+                  <br />
+                  Zacznij od jednej rozmowy.
+                </h2>
+                <p className="text-white/80 text-lg leading-relaxed mb-8">
+                  Podczas bezpłatnej 30-minutowej rozmowy wstępnej przyjrzymy się
+                  Twojej sytuacji i ustalimy, czy i jak mogę Ci pomóc. Bez presji,
+                  bez zobowiązań.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link
+                    href="/kontakt"
+                    className="bg-white text-gold px-8 py-4 rounded-full font-semibold hover:bg-cream transition-colors duration-200 text-center text-sm"
+                  >
+                    Umów bezpłatną rozmowę
+                  </Link>
+                  <Link
+                    href="/uslugi"
+                    className="border border-white/40 text-white px-8 py-4 rounded-full font-medium hover:border-white/80 transition-colors duration-200 text-center text-sm"
+                  >
+                    Zobacz ofertę
+                  </Link>
+                </div>
+                <p className="text-white/60 text-sm mt-5 flex items-center gap-2">
+                  <CheckCircle size={14} className="flex-shrink-0" />
+                  Pierwsza rozmowa jest całkowicie bezpłatna i niezobowiązująca
+                </p>
+              </div>
+            </FadeInSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {[
-              {
-                icon: Mail,
-                label: 'Email',
-                value: 'doradztwo.coaching@gmail.com',
-                href: 'mailto:doradztwo.coaching@gmail.com',
-              },
-              {
-                icon: Phone,
-                label: 'Telefon',
-                value: '+48 603 614 521',
-                href: 'tel:+48603614521',
-              },
-              {
-                icon: MapPin,
-                label: 'Lokalizacja',
-                value: 'Lublin',
-                href: undefined,
-              },
-              {
-                icon: Clock,
-                label: 'Godziny',
-                value: 'Pon – Pt, 9:00–17:00',
-                href: undefined,
-              },
-            ].map((item, index) => {
-              const Icon = item.icon
-              const content = (
-                <FadeInSection key={index} delay={index * 0.1}>
-                  <div className="card flex flex-col items-center text-center gap-4 py-8">
-                    <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center">
-                      <Icon size={22} className="text-gold" />
-                    </div>
-                    <div>
-                      <p className="text-sm text-gray-400 mb-1">{item.label}</p>
-                      <p className="font-medium text-[#1A1A1A] text-sm">{item.value}</p>
-                    </div>
+            <FadeInSection direction="right" delay={0.15}>
+              <div className="space-y-4">
+                <div className="bg-white/10 rounded-2xl p-5 flex items-start gap-4">
+                  <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Phone size={18} className="text-white" />
                   </div>
-                </FadeInSection>
-              )
-
-              return item.href ? (
-                <a
-                  key={index}
-                  href={item.href}
-                  className="group hover:no-underline"
-                  aria-label={`${item.label}: ${item.value}`}
-                >
-                  {content}
-                </a>
-              ) : (
-                <div key={index}>{content}</div>
-              )
-            })}
+                  <div>
+                    <p className="text-white/60 text-xs mb-1">Telefon</p>
+                    <a
+                      href="tel:+48000000000"
+                      className="text-white font-medium text-sm hover:text-white/80 transition-colors"
+                    >
+                      +48 000 000 000
+                    </a>
+                  </div>
+                </div>
+                <div className="bg-white/10 rounded-2xl p-5 flex items-start gap-4">
+                  <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Mail size={18} className="text-white" />
+                  </div>
+                  <div>
+                    <p className="text-white/60 text-xs mb-1">E-mail</p>
+                    <a
+                      href="mailto:kontakt@konsultantkakariery.pl"
+                      className="text-white font-medium text-sm hover:text-white/80 transition-colors"
+                    >
+                      kontakt@konsultantkakariery.pl
+                    </a>
+                  </div>
+                </div>
+                <div className="bg-white/10 rounded-2xl p-5 flex items-start gap-4">
+                  <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <MapPin size={18} className="text-white" />
+                  </div>
+                  <div>
+                    <p className="text-white/60 text-xs mb-1">Lokalizacja</p>
+                    <p className="text-white font-medium text-sm">
+                      Lublin | Online w całej Polsce
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </FadeInSection>
           </div>
-
-          {/* Social + CTA */}
-          <FadeInSection className="flex flex-col sm:flex-row items-center justify-center gap-6" delay={0.3}>
-            <a
-              href="https://www.facebook.com/ewelinadyjakkariera"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-gray-600 hover:text-gold transition-colors"
-              aria-label="Facebook Eweliny Dyjak"
-            >
-              <Facebook size={20} />
-              <span className="text-sm font-medium">Facebook</span>
-            </a>
-            <a
-              href="https://www.instagram.com/konsultantka.kariery/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-gray-600 hover:text-gold transition-colors"
-              aria-label="Instagram Eweliny Dyjak"
-            >
-              <Instagram size={20} />
-              <span className="text-sm font-medium">Instagram</span>
-            </a>
-            <span className="hidden sm:block w-px h-6 bg-warm" />
-            <Link href="/kontakt" className="btn-primary">
-              Napisz do mnie
-            </Link>
-          </FadeInSection>
         </div>
       </section>
 
       {/* ===== BLOG PREVIEW ===== */}
       <section className="bg-white section-padding">
         <div className="container-width">
-          <FadeInSection className="text-center mb-16">
-            <p className="section-label">Rozwijaj ambicje</p>
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1A1A1A]">
-              Moje teksty o zarządzaniu karierą
-            </h2>
+          <FadeInSection className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-12">
+            <div>
+              <p className="section-label">Blog</p>
+              <h2 className="text-3xl lg:text-4xl font-bold text-[#1A1A1A]">
+                Artykuły o karierze
+              </h2>
+            </div>
+            <Link
+              href="/blog"
+              className="btn-outline whitespace-nowrap inline-flex items-center gap-2 text-sm py-3"
+            >
+              Wszystkie artykuły
+              <ArrowRight size={14} />
+            </Link>
           </FadeInSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {blogPosts.map((post, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {previewPosts.map((post, index) => (
               <FadeInSection key={post.slug} delay={index * 0.1}>
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="group block bg-white border border-warm rounded-2xl overflow-hidden hover:shadow-md transition-all duration-300"
+                  className="group block bg-beige rounded-2xl overflow-hidden hover:shadow-md transition-all duration-300 h-full"
                 >
-                  {/* TODO: Zamień na prawdziwe zdjęcie */}
-                  <div className="bg-beige aspect-[16/9] flex items-center justify-center relative overflow-hidden">
-                    <div className="flex flex-col items-center gap-2 text-gray-400">
-                      <span className="text-xs font-medium uppercase tracking-widest text-gold/60">
-                        Blog
-                      </span>
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-br from-warm/40 to-beige/60" />
+                  <div className="bg-warm aspect-[16/9] flex items-center justify-center relative">
+                    <span className="text-xs font-semibold uppercase tracking-widest text-gold/60 relative z-10">
+                      {post.category}
+                    </span>
+                    <div className="absolute inset-0 bg-gradient-to-br from-warm/30 to-beige" />
                   </div>
                   <div className="p-6">
-                    <p className="text-xs text-gray-400 mb-3">{post.date}</p>
-                    <h3 className="text-lg font-semibold text-[#1A1A1A] mb-3 group-hover:text-gold transition-colors duration-200 leading-snug">
+                    <span className="text-xs font-medium text-brand-blue bg-brand-blue/10 px-3 py-1 rounded-full">
+                      {post.category}
+                    </span>
+                    <h3 className="text-base font-semibold text-[#1A1A1A] mt-3 mb-2 group-hover:text-gold transition-colors duration-200 leading-snug">
                       {post.title}
                     </h3>
-                    <p className="text-gray-500 text-sm leading-relaxed mb-4">
+                    <p className="text-gray-500 text-sm leading-relaxed line-clamp-2">
                       {post.excerpt}
                     </p>
-                    <span className="text-gold text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
+                    <span className="inline-flex items-center gap-1 text-gold text-sm font-medium mt-4 group-hover:gap-2 transition-all duration-200">
                       Czytaj więcej
-                      <ArrowUpRight size={16} />
+                      <ArrowRight size={14} />
                     </span>
                   </div>
                 </Link>
               </FadeInSection>
             ))}
           </div>
-
-          <FadeInSection className="text-center mt-12" delay={0.2}>
-            <Link href="/blog" className="btn-outline inline-block">
-              Wszystkie wpisy
-            </Link>
-          </FadeInSection>
         </div>
       </section>
     </>
