@@ -2,8 +2,9 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowLeft, Clock, Calendar, ArrowRight, BookOpen } from 'lucide-react'
+import { Clock, Calendar, ArrowRight, BookOpen } from 'lucide-react'
 import FadeInSection from '@/components/FadeInSection'
+import Breadcrumbs from '@/components/Breadcrumbs'
 import { blogPosts, getBlogPost, getAllSlugs, type BlogPost, type BlogSection } from '@/lib/blog-data'
 
 interface PageProps {
@@ -160,13 +161,12 @@ export default async function BlogPostPage({ params }: PageProps) {
       <section className="bg-beige section-padding pb-0">
         <div className="container-width">
           <FadeInSection>
-            <Link
-              href="/blog"
-              className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-gold transition-colors duration-200 mb-10"
-            >
-              <ArrowLeft size={15} />
-              Wróć do bloga
-            </Link>
+            <Breadcrumbs
+              items={[
+                { label: 'Blog', href: '/blog' },
+                { label: post.title },
+              ]}
+            />
           </FadeInSection>
 
           <FadeInSection delay={0.05}>

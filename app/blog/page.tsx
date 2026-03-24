@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowUpRight, Clock, Search } from 'lucide-react'
 import FadeInSection from '@/components/FadeInSection'
+import Breadcrumbs from '@/components/Breadcrumbs'
 import { blogPosts } from '@/lib/blog-data'
 
 export const metadata: Metadata = {
@@ -34,6 +35,7 @@ export default function BlogPage() {
       <section className="bg-beige section-padding">
         <div className="container-width">
           <FadeInSection className="max-w-2xl">
+            <Breadcrumbs items={[{ label: 'Blog', href: '/blog' }]} />
             <p className="section-label">Blog</p>
             <h1 className="text-4xl sm:text-5xl font-bold text-[#1A1A1A] leading-tight mb-6">
               Blog — zarządzanie karierą
