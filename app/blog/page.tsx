@@ -71,7 +71,7 @@ export default function BlogPage() {
 
                         <div className="p-6">
                           <div className="flex items-center gap-3 mb-3">
-                            <span className="text-xs font-medium text-gold bg-gold/10 px-3 py-1 rounded-full">
+                            <span className="text-xs font-medium text-brand-blue bg-brand-blue/10 px-3 py-1 rounded-full">
                               {post.category}
                             </span>
                             <span className="flex items-center gap-1 text-xs text-gray-400">
@@ -173,7 +173,7 @@ export default function BlogPage() {
                 </div>
 
                 {/* CTA */}
-                <div className="bg-gold rounded-2xl p-6 text-white">
+                <div className="bg-brand-blue rounded-2xl p-6 text-white">
                   <h3 className="font-semibold mb-2">Gotowy/a na zmianę?</h3>
                   <p className="text-white/80 text-sm mb-4 leading-relaxed">
                     Umów bezpłatną rozmowę wstępną i zacznij działać.

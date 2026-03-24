@@ -208,7 +208,7 @@ export default function OmniePage() {
       </section>
 
       {/* ===== CTA ===== */}
-      <section className="bg-gold section-padding">
+      <section className="bg-brand-blue section-padding">
         <div className="container-width text-center">
           <FadeInSection>
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">

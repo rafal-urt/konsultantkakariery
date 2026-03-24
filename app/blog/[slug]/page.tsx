@@ -132,7 +132,7 @@ export default function BlogPostPage({ params }: PageProps) {
             <div className="max-w-3xl">
               {/* Meta */}
               <div className="flex flex-wrap items-center gap-4 mb-6">
-                <span className="text-xs font-semibold text-gold bg-gold/10 px-3 py-1 rounded-full">
+                <span className="text-xs font-semibold text-brand-blue bg-brand-blue/10 px-3 py-1 rounded-full">
                   {post.category}
                 </span>
                 <span className="flex items-center gap-1.5 text-sm text-gray-400">
@@ -211,7 +211,7 @@ export default function BlogPostPage({ params }: PageProps) {
             <FadeInSection direction="right" delay={0.2}>
               <aside className="space-y-8 lg:sticky lg:top-28">
                 {/* CTA */}
-                <div className="bg-gold rounded-2xl p-6 text-white">
+                <div className="bg-brand-blue rounded-2xl p-6 text-white">
                   <h3 className="font-bold text-lg mb-2">
                     Chcesz porozmawiać o swojej karierze?
                   </h3>
@@ -239,7 +239,7 @@ export default function BlogPostPage({ params }: PageProps) {
                             href={`/blog/${p.slug}`}
                             className="group block"
                           >
-                            <span className="text-xs text-gold font-medium block mb-1">
+                            <span className="text-xs text-brand-blue font-medium block mb-1">
                               {p.category}
                             </span>
                             <p className="text-sm text-gray-700 group-hover:text-gold transition-colors leading-snug mb-1">

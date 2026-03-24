@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --color-gold: #B8860B;
+  --color-gold: #F66134;
+  --color-brand-blue: #04638B;
+  --color-brand-brown: #584732;
   --color-cream: #FDFBF7;
   --color-beige: #F5F0E8;
   --color-warm: #E5DFD3;
@@ -25,7 +27,7 @@
   }
 
   :focus-visible {
-    outline: 2px solid #B8860B;
+    outline: 2px solid #F66134;
     outline-offset: 2px;
   }
 }
@@ -36,11 +38,11 @@
   }
 
   .btn-outline {
-    @apply border-2 border-gold text-gold px-8 py-4 rounded-full font-medium text-sm hover:bg-gold hover:text-white transition-all duration-200;
+    @apply border-2 border-brand-blue text-brand-blue px-8 py-4 rounded-full font-medium text-sm hover:bg-brand-blue hover:text-white transition-all duration-200;
   }
 
   .section-label {
-    @apply text-gold text-sm font-semibold uppercase tracking-widest mb-3;
+    @apply text-brand-blue text-sm font-semibold uppercase tracking-widest mb-3;
   }
 
   .card {
@@ -66,7 +68,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #B8860B;
+  background: #04638B;
   border-radius: 3px;
 }
 
@@ -85,6 +87,6 @@
 
 /* Selection color */
 ::selection {
-  background-color: #B8860B;
+  background-color: #F66134;
   color: white;
 }

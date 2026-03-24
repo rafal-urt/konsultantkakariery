@@ -10,13 +10,17 @@ const config: Config = {
     extend: {
       colors: {
         gold: {
-          DEFAULT: '#B8860B',
-          dark: '#96700A',
-          light: '#D4A017',
+          DEFAULT: '#F66134',
+          dark: '#d4522a',
+          light: '#f87855',
         },
         cream: '#FDFBF7',
         beige: '#F5F0E8',
         warm: '#E5DFD3',
+        brand: {
+          blue: '#04638B',
+          brown: '#584732',
+        },
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'sans-serif'],

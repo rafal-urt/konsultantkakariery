@@ -307,7 +307,7 @@ export default function HomePage() {
                   }`}
                 >
                   <div className={index % 2 === 1 ? 'lg:[direction:ltr]' : ''}>
-                    <div className="text-8xl font-bold text-gold/15 leading-none mb-4 select-none">
+                    <div className="text-8xl font-bold text-brand-blue/20 leading-none mb-4 select-none">
                       {step.number}
                     </div>
                     <h3 className="text-2xl font-bold text-[#1A1A1A] mb-4">

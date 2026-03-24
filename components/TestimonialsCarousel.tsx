@@ -82,15 +82,15 @@ export default function TestimonialsCarousel() {
           >
             <Quote
               size={40}
-              className="text-gold/20 mb-6 fill-gold/10"
+              className="text-brand-brown/40 mb-6 fill-brand-brown/20"
               aria-hidden="true"
             />
             <p className="text-gray-700 text-lg leading-relaxed mb-8 italic">
               &ldquo;{testimonials[current].content}&rdquo;
             </p>
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-beige flex items-center justify-center flex-shrink-0">
-                <span className="text-gold font-bold text-lg">
+              <div className="w-12 h-12 rounded-full bg-brand-blue/10 flex items-center justify-center flex-shrink-0">
+                <span className="text-brand-blue font-bold text-lg">
                   {testimonials[current].name.charAt(0)}
                 </span>
               </div>

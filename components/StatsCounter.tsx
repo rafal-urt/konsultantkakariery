@@ -64,7 +64,7 @@ export default function StatsCounter() {
           key={index}
           className="text-center md:text-left p-8 bg-white rounded-2xl shadow-sm"
         >
-          <p className="text-6xl lg:text-7xl font-bold text-gold mb-2 leading-none">
+          <p className="text-6xl lg:text-7xl font-bold text-brand-blue mb-2 leading-none">
             <Counter value={stat.value} suffix={stat.suffix} />
           </p>
           <p className="text-xl font-semibold text-[#1A1A1A] mb-3">{stat.label}</p>
