@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Compass, Sparkles, ArrowUpRight, Mail, Phone, MapPin, Clock, Facebook, Instagram } from 'lucide-react'
-import ImagePlaceholder from '@/components/ImagePlaceholder'
+import Image from 'next/image'
 import FadeInSection from '@/components/FadeInSection'
 import TestimonialsCarousel from '@/components/TestimonialsCarousel'
 import StatsCounter from '@/components/StatsCounter'
@@ -87,18 +87,21 @@ const processSteps = [
     title: 'Zatrzymujemy się i porządkujemy Twoją sytuację',
     description:
       'Przyglądamy się Twojej aktualnej sytuacji zawodowej bez ocen i presji. Pomagam nazwać to, co naprawdę Cię blokuje, co Cię męczy i czego w pracy już nie chcesz. To moment, w którym chaos zamienia się w pierwszą klarowność.',
+    image: '/gfx/ewelina_5.jpg',
   },
   {
     number: '02',
     title: 'Odkrywamy kierunek i Twoje zasoby',
     description:
       'Wspólnie identyfikujemy Twoje mocne strony, kompetencje i wartości, które mają realne znaczenie na rynku pracy. Sprawdzamy możliwe kierunki rozwoju i wybieramy te, które są zgodne z Tobą i Twoim stylem życia. Tu zaczyna się odzyskiwanie pewności siebie.',
+    image: '/gfx/ewelina_6.jpg',
   },
   {
     number: '03',
     title: 'Przekładamy decyzje na konkretne działania',
     description:
       'Tworzymy realny plan dalszych kroków — bez skoków na głęboką wodę i bez chaosu. Pokazuję, jak działać mądrze: jak szukać pracy, jak się przygotować do rozmów i jak świadomie zarządzać swoją karierą. Zostajesz z planem, który możesz wdrożyć tu i teraz.',
+    image: '/gfx/ewelina_7.jpg',
   },
 ]
 
@@ -137,12 +140,16 @@ export default function HomePage() {
             {/* Image */}
             <FadeInSection direction="right" delay={0.2}>
               <div className="relative">
-                {/* TODO: Zamień na prawdziwe zdjęcie */}
-                <ImagePlaceholder
-                  text="Zdjęcie Eweliny"
-                  aspectRatio="3/4"
-                  className="w-full max-w-sm mx-auto lg:max-w-none"
-                />
+                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden w-full max-w-sm mx-auto lg:max-w-none">
+                  <Image
+                    src="/gfx/ewelina_1.jpg"
+                    alt="Ewelina Dyjak — Konsultantka Kariery"
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 1024px) 384px, 50vw"
+                    priority
+                  />
+                </div>
                 {/* Decorative element */}
                 <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-gold/10 rounded-2xl -z-10" />
                 <div className="absolute -top-4 -right-4 w-16 h-16 bg-beige rounded-full -z-10" />
@@ -158,12 +165,15 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Image left */}
             <FadeInSection direction="left">
-              {/* TODO: Zamień na prawdziwe zdjęcie */}
-              <ImagePlaceholder
-                text="Zdjęcie Eweliny"
-                aspectRatio="4/3"
-                className="w-full"
-              />
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden w-full">
+                <Image
+                  src="/gfx/ewelina_2.jpg"
+                  alt="Ewelina Dyjak podczas konsultacji kariery"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
             </FadeInSection>
 
             {/* Text right */}
@@ -249,12 +259,15 @@ export default function HomePage() {
 
             {/* Image */}
             <FadeInSection direction="right" delay={0.1}>
-              {/* TODO: Zamień na prawdziwe zdjęcie */}
-              <ImagePlaceholder
-                text="Zdjęcie Eweliny"
-                aspectRatio="4/3"
-                className="w-full"
-              />
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden w-full">
+                <Image
+                  src="/gfx/ewelina_3.jpg"
+                  alt="Ewelina Dyjak — pasja do pracy z ludźmi w zmianie kariery"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
             </FadeInSection>
           </div>
         </div>
@@ -305,12 +318,15 @@ export default function HomePage() {
                     </p>
                   </div>
                   <div className={index % 2 === 1 ? 'lg:[direction:ltr]' : ''}>
-                    {/* TODO: Zamień na prawdziwe zdjęcie */}
-                    <ImagePlaceholder
-                      text={`Krok ${step.number}`}
-                      aspectRatio="4/3"
-                      className="w-full"
-                    />
+                    <div className="relative aspect-[4/3] rounded-2xl overflow-hidden w-full">
+                      <Image
+                        src={step.image}
+                        alt={`Ewelina Dyjak — etap ${step.number} procesu kariery`}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                      />
+                    </div>
                   </div>
                 </div>
               </FadeInSection>
@@ -342,12 +358,15 @@ export default function HomePage() {
               </div>
             </FadeInSection>
             <FadeInSection direction="right" delay={0.1}>
-              {/* TODO: Zamień na prawdziwe zdjęcie */}
-              <ImagePlaceholder
-                text="Zdjęcie Eweliny"
-                aspectRatio="4/3"
-                className="w-full"
-              />
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden w-full">
+                <Image
+                  src="/gfx/ewelina_4.jpg"
+                  alt="Ewelina Dyjak — umów pierwszą konsultację kariery"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
             </FadeInSection>
           </div>
         </div>

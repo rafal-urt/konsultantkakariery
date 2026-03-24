@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
 
@@ -43,11 +44,15 @@ export default function Navbar() {
       >
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex flex-col group" aria-label="Strona główna">
-            <span className="font-semibold italic text-xl text-[#1A1A1A] group-hover:text-gold transition-colors duration-200 leading-tight">
-              Ewelina Dyjak
-            </span>
-            <span className="text-xs text-gray-500 leading-tight">Konsultantka Kariery</span>
+          <Link href="/" aria-label="Strona główna — Ewelina Dyjak Konsultantka Kariery">
+            <Image
+              src="/gfx/ewelinadyjak_3_30wys.png"
+              alt="Ewelina Dyjak — Konsultantka Kariery"
+              width={221}
+              height={30}
+              priority
+              className="h-8 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}

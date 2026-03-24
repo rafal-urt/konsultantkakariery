@@ -9,7 +9,7 @@ import {
   MapPin,
   Clock,
 } from 'lucide-react'
-import ImagePlaceholder from '@/components/ImagePlaceholder'
+import Image from 'next/image'
 import FadeInSection from '@/components/FadeInSection'
 
 export const metadata: Metadata = {
@@ -94,12 +94,16 @@ export default function OmniePage() {
             </FadeInSection>
 
             <FadeInSection direction="right" delay={0.15}>
-              {/* TODO: Zamień na prawdziwe zdjęcie */}
-              <ImagePlaceholder
-                text="Zdjęcie Eweliny"
-                aspectRatio="3/4"
-                className="w-full max-w-sm mx-auto lg:max-w-none"
-              />
+              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden w-full max-w-sm mx-auto lg:max-w-none">
+                <Image
+                  src="/gfx/ewelina_8.jpg"
+                  alt="Ewelina Dyjak — Konsultantka Kariery, Lublin"
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 1024px) 384px, 50vw"
+                  priority
+                />
+              </div>
             </FadeInSection>
           </div>
         </div>

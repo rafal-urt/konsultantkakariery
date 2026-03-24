@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { Mail, Phone, MapPin, Clock, Facebook, Instagram } from 'lucide-react'
 import ContactForm from '@/components/ContactForm'
 import FadeInSection from '@/components/FadeInSection'
@@ -74,9 +75,21 @@ export default function KontaktPage() {
             {/* Left: Contact info */}
             <FadeInSection direction="left">
               <div>
-                <h2 className="text-2xl font-bold text-[#1A1A1A] mb-8">
-                  Dane kontaktowe
-                </h2>
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
+                    <Image
+                      src="/gfx/ewelina_9.jpg"
+                      alt="Ewelina Dyjak — Konsultantka Kariery"
+                      fill
+                      className="object-cover object-top"
+                      sizes="64px"
+                      priority
+                    />
+                  </div>
+                  <h2 className="text-2xl font-bold text-[#1A1A1A]">
+                    Dane kontaktowe
+                  </h2>
+                </div>
 
                 <ul className="space-y-6 mb-10">
                   {contactDetails.map((item, index) => {

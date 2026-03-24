@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowLeft, Clock, Calendar, ArrowUpRight } from 'lucide-react'
 import FadeInSection from '@/components/FadeInSection'
 import { blogPosts, getBlogPost, getAllSlugs, type BlogPost } from '@/lib/blog-data'
@@ -178,8 +179,14 @@ export default function BlogPostPage({ params }: PageProps) {
               {/* Author */}
               <FadeInSection delay={0.1}>
                 <div className="border-t border-warm mt-12 pt-10 flex items-start gap-5">
-                  <div className="w-16 h-16 bg-beige rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-gold font-bold text-xl">E</span>
+                  <div className="relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
+                    <Image
+                      src="/gfx/ewelina_9.jpg"
+                      alt="Ewelina Dyjak"
+                      fill
+                      className="object-cover object-top"
+                      sizes="64px"
+                    />
                   </div>
                   <div>
                     <p className="font-semibold text-[#1A1A1A] mb-1">Ewelina Dyjak</p>
