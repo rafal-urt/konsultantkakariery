@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-gold: #B8860B;
+  --color-cream: #FDFBF7;
+  --color-beige: #F5F0E8;
+  --color-warm: #E5DFD3;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #FDFBF7;
+    color: #1A1A1A;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: #1A1A1A;
+  }
+
+  :focus-visible {
+    outline: 2px solid #B8860B;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gold text-white px-8 py-4 rounded-full font-medium text-sm hover:bg-gold-dark transition-all duration-200 shadow-sm hover:shadow-md;
+  }
+
+  .btn-outline {
+    @apply border-2 border-gold text-gold px-8 py-4 rounded-full font-medium text-sm hover:bg-gold hover:text-white transition-all duration-200;
+  }
+
+  .section-label {
+    @apply text-gold text-sm font-semibold uppercase tracking-widest mb-3;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 p-8;
+  }
+
+  .section-padding {
+    @apply py-20 lg:py-28;
+  }
+
+  .container-width {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F0E8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B8860B;
+  border-radius: 3px;
+}
+
+/* Form input styling */
+.form-input {
+  @apply w-full px-4 py-3 rounded-xl border border-warm bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition-all duration-200;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-gray-700 mb-2;
+}
+
+.form-error {
+  @apply text-red-500 text-sm mt-1;
+}
+
+/* Selection color */
+::selection {
+  background-color: #B8860B;
+  color: white;
+}
