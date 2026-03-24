@@ -11,6 +11,7 @@ import {
 } from 'lucide-react'
 import Image from 'next/image'
 import FadeInSection from '@/components/FadeInSection'
+import Breadcrumbs from '@/components/Breadcrumbs'
 
 export const metadata: Metadata = {
   title: 'O mnie — Ewelina Dyjak | Konsultantka Kariery',
@@ -69,7 +70,8 @@ export default function OmniePage() {
       {/* ===== HERO ===== */}
       <section className="bg-beige section-padding">
         <div className="container-width">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <Breadcrumbs items={[{ label: 'O mnie', href: '/o-mnie' }]} />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <FadeInSection direction="left">
               <div>
                 <p className="section-label">O mnie</p>

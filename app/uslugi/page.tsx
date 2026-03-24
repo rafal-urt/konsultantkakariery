@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { MessageSquare, Layers, Briefcase, CheckCircle, ArrowRight } from 'lucide-react'
 import FadeInSection from '@/components/FadeInSection'
+import Breadcrumbs from '@/components/Breadcrumbs'
 
 export const metadata: Metadata = {
   title: 'Usługi — Konsultacje kariery i coaching | Ewelina Dyjak',
@@ -97,6 +98,7 @@ export default function UslugiPage() {
       <section className="bg-beige section-padding">
         <div className="container-width">
           <FadeInSection className="max-w-2xl">
+            <Breadcrumbs items={[{ label: 'Usługi', href: '/uslugi' }]} />
             <p className="section-label">Oferta</p>
             <h1 className="text-4xl sm:text-5xl font-bold text-[#1A1A1A] leading-tight mb-6">
               Jak mogę Ci pomóc?

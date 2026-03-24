@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Mail, Phone, MapPin, Clock, Facebook, Instagram } from 'lucide-react'
 import ContactForm from '@/components/ContactForm'
 import FadeInSection from '@/components/FadeInSection'
+import Breadcrumbs from '@/components/Breadcrumbs'
 
 export const metadata: Metadata = {
   title: 'Kontakt — Umów konsultację | Ewelina Dyjak',
@@ -55,6 +56,7 @@ export default function KontaktPage() {
       <section className="bg-beige section-padding">
         <div className="container-width">
           <FadeInSection className="max-w-2xl">
+            <Breadcrumbs items={[{ label: 'Kontakt', href: '/kontakt' }]} />
             <p className="section-label">Kontakt</p>
             <h1 className="text-4xl sm:text-5xl font-bold text-[#1A1A1A] leading-tight mb-6">
               Porozmawiajmy

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Quote, Star } from 'lucide-react'
 import FadeInSection from '@/components/FadeInSection'
+import Breadcrumbs from '@/components/Breadcrumbs'
 
 export const metadata: Metadata = {
   title: 'Opinie klientów — Konsultantka Kariery Ewelina Dyjak',
@@ -84,7 +85,9 @@ export default function KlienciPage() {
     <>
       {/* ===== HERO ===== */}
       <section className="bg-beige section-padding">
-        <div className="container-width text-center">
+        <div className="container-width">
+          <Breadcrumbs items={[{ label: 'Opinie klientów', href: '/klienci' }]} />
+          <div className="text-center">
           <FadeInSection>
             <p className="section-label">Opinie</p>
             <h1 className="text-4xl sm:text-5xl font-bold text-[#1A1A1A] leading-tight mb-6">
@@ -95,6 +98,7 @@ export default function KlienciPage() {
               proces zmiany i udało im się go zakończyć sukcesem.
             </p>
           </FadeInSection>
+          </div>
         </div>
       </section>
 
