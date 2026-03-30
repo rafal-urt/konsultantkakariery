@@ -159,9 +159,14 @@ export default function Footer() {
           <p className="text-white/50 text-xs text-center sm:text-left">
             © 2026 Ewelina Dyjak — Konsultantka Kariery. Wszelkie prawa zastrzeżone.
           </p>
-          <p className="text-white/40 text-xs">
-            Projekt i wykonanie: rafal.urta.pl
-          </p>
+          <a
+            href="https://urtate.pl"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/40 hover:text-white/70 text-xs transition-colors duration-200"
+          >
+            Projekt i wykonanie: urtate.pl
+          </a>
         </div>
       </div>
 
