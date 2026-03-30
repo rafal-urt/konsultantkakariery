@@ -4,12 +4,14 @@ import Image from 'next/image'
 import {
   CheckCircle,
   ArrowRight,
-  MessageSquare,
-  Layers,
   Briefcase,
+  FileText,
+  Heart,
   MapPin,
   Phone,
   Mail,
+  Star,
+  Quote,
 } from 'lucide-react'
 import FadeInSection from '@/components/FadeInSection'
 import TestimonialsCarousel from '@/components/TestimonialsCarousel'
@@ -19,7 +21,7 @@ import { blogPosts } from '@/lib/blog-data'
 export const metadata: Metadata = {
   title: 'Konsultantka Kariery — Ewelina Dyjak | Lublin & online',
   description:
-    'Pomagam w świadomej zmianie zawodowej, przebranżowieniu i budowaniu pewności siebie w karierze. Konsultacje online w całej Polsce i stacjonarnie w Lublinie.',
+    'Uczę, jak świadomie zarządzać karierą – bez presji i przypadkowych decyzji. Konsultacje kariery, program Wróć Pewniejsza i skuteczne CV. Online w całej Polsce.',
   openGraph: {
     title: 'Konsultantka Kariery — Ewelina Dyjak',
     description:
@@ -30,12 +32,60 @@ export const metadata: Metadata = {
 }
 
 const painPoints = [
-  'Czujesz, że Twoja praca Cię nie satysfakcjonuje, ale nie wiesz, co chcesz robić',
-  'Myślisz o zmianie pracy lub branży, ale boisz się, że to za duże ryzyko',
-  'Wracasz na rynek pracy po przerwie i nie wiesz, jak się odnaleźć',
-  'Masz dość poniedziałkowego lęku i poczucia, że marnujesz swój potencjał',
-  'Brakuje Ci pewności siebie podczas rozmów kwalifikacyjnych i negocjacji',
-  'Chcesz wreszcie mieć plan — nie tylko marzenia',
+  { emoji: '🔥', text: 'Czujesz wypalenie zawodowe i nie widzisz wyjścia z obecnej sytuacji' },
+  { emoji: '🔀', text: 'Myślisz o zmianie pracy lub branży, ale boisz się zrobić zły krok' },
+  { emoji: '👶', text: 'Wracasz po urlopie macierzyńskim i nie wiesz, czego chcesz teraz' },
+  { emoji: '📨', text: 'Wysyłasz CV i nic — brak odpowiedzi, spada pewność siebie' },
+  { emoji: '🧭', text: 'Masz doświadczenie, ale brakuje Ci kierunku i motywacji do działania' },
+  { emoji: '✅', text: 'Chcesz wreszcie mieć konkretny plan — nie tylko marzenia o zmianie' },
+]
+
+const services = [
+  {
+    icon: Briefcase,
+    label: 'Konsultacje kariery',
+    tagline: 'Zmień pracę albo branżę ze świadomym planem',
+    price: 'od 630 zł',
+    priceNote: '3 lub 6 spotkań',
+    href: '/uslugi/konsultacje-kariery',
+    color: 'blue',
+    featured: false,
+    bullets: [
+      'Diagnoza mocnych stron i celów zawodowych',
+      'Plan zmiany krok po kroku',
+      'Pakiet rozszerzony: CV, LinkedIn, rozmowy',
+    ],
+  },
+  {
+    icon: Heart,
+    label: 'Wróć Pewniejsza',
+    tagline: 'Wróć do pracy na swoich warunkach — z planem',
+    price: '890 zł',
+    priceNote: '5 spotkań × 60 min',
+    href: '/uslugi/wroc-pewniejsza',
+    color: 'gold',
+    featured: true,
+    bullets: [
+      'Dla mam wracających po urlopie macierzyńskim',
+      'Świadoma decyzja: stara praca czy nowa ścieżka?',
+      'Odświeżone CV + plan działania na 30 dni',
+    ],
+  },
+  {
+    icon: FileText,
+    label: 'Twoje skuteczne CV',
+    tagline: 'CV, które otwiera drzwi — nie ląduje w koszu',
+    price: '250 zł',
+    priceNote: '1 spotkanie + konsultacja mailowa',
+    href: '/uslugi/skuteczne-cv',
+    color: 'blue',
+    featured: false,
+    bullets: [
+      'CV pod systemy ATS i rekrutera',
+      'Praca na Twoim dokumencie lub od podstaw',
+      'Wiedza, którą stosujesz samodzielnie',
+    ],
+  },
 ]
 
 const processSteps = [
@@ -43,46 +93,19 @@ const processSteps = [
     number: '01',
     title: 'Bezpłatna rozmowa wstępna',
     description:
-      'Zaczynamy od 30-minutowej rozmowy, podczas której poznaję Twoją sytuację i sprawdzamy, czy możemy razem pracować. Bez zobowiązań, bez presji.',
+      '~20 minut, online lub telefonicznie. Poznaję Twoją sytuację, Ty poznajesz mój sposób pracy. Zero zobowiązań.',
   },
   {
     number: '02',
-    title: 'Diagnoza i plan działania',
+    title: 'Diagnoza i plan',
     description:
-      'Na pierwszych sesjach głębiej analizujemy Twoje mocne strony, wartości i cele. Razem budujemy konkretny plan — krok po kroku.',
+      'Analizujemy Twoje mocne strony, wartości i cele. Razem budujemy konkretny plan dopasowany do Twojej sytuacji.',
   },
   {
     number: '03',
     title: 'Działanie i zmiana',
     description:
-      'Pracujemy systematycznie, aż osiągniesz cel. Każda sesja to konkretne narzędzia i ćwiczenia, które możesz stosować natychmiast.',
-  },
-]
-
-const services = [
-  {
-    icon: Briefcase,
-    title: 'Konsultacje kariery',
-    description:
-      'Plan ścieżki kariery (630 zł) lub kompletna zmiana zawodowa (980 zł) — 2 pakiety do wyboru. Od diagnozy mocnych stron po plan działania i wsparcie w rekrutacji.',
-    href: '/uslugi#konsultacje-kariery',
-    featured: false,
-  },
-  {
-    icon: MessageSquare,
-    title: 'Wróć Pewniejsza',
-    description:
-      'Program dla mam powracających po urlopie macierzyńskim. 5 spotkań, w których pomagam świadomie zdecydować — wrócić do starej pracy czy obrać nową ścieżkę.',
-    href: '/uslugi#wroc-pewniejsza',
-    featured: true,
-  },
-  {
-    icon: Layers,
-    title: 'Twoje skuteczne CV',
-    description:
-      'Naucz się tworzyć CV, które zwróci uwagę rekrutera. Pracujemy na Twoim dokumencie lub tworzymy od podstaw — wiedza, którą wykorzystasz w każdej rekrutacji.',
-    href: '/uslugi#skuteczne-cv',
-    featured: false,
+      'Pracujemy systematycznie. Każde spotkanie kończy się konkretnym krokiem. Wychodzisz z narzędziami, nie tylko z planem.',
   },
 ]
 
@@ -95,19 +118,22 @@ export default function HomePage() {
       <section className="bg-beige section-padding">
         <div className="container-width">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+            {/* Left */}
             <FadeInSection direction="left">
               <div className="max-w-xl">
                 <p className="section-label">Konsultantka Kariery — Lublin & online</p>
                 <h1 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-bold text-[#1A1A1A] leading-tight mb-6">
-                  Twoja kariera powinna dawać Ci energię —{' '}
-                  <span className="text-gold">nie wyczerpywać</span>
+                  Uczę, jak świadomie zarządzać swoją karierą —{' '}
+                  <span className="text-gold">bez presji i przypadkowych decyzji</span>
                 </h1>
                 <p className="text-gray-500 text-lg leading-relaxed mb-8">
-                  Pomagam osobom w świadomej zmianie zawodowej, odkryciu mocnych stron
-                  i odbudowaniu pewności siebie. Konsultacje indywidualne online
-                  w całej Polsce i stacjonarnie w Lublinie.
+                  Wspieram osoby w zawodowym rozkroku: zmęczone obecną pracą,
+                  niepewne powrotu po przerwie, zagubione wśród możliwości.
+                  Pomagam im podjąć świadome decyzje i ułożyć konkretny plan zmiany.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
+
+                <div className="flex flex-col sm:flex-row gap-4 mb-6">
                   <Link href="/kontakt" className="btn-primary text-center">
                     Umów bezpłatną rozmowę
                   </Link>
@@ -115,16 +141,24 @@ export default function HomePage() {
                     Zobacz ofertę
                   </Link>
                 </div>
-                <p className="text-sm text-gray-400 mt-4 flex items-center gap-2">
-                  <CheckCircle size={15} className="text-gold flex-shrink-0" />
-                  Pierwsza rozmowa jest bezpłatna i niezobowiązująca
-                </p>
+
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-sm text-gray-400">
+                  <span className="flex items-center gap-1.5">
+                    <CheckCircle size={14} className="text-gold flex-shrink-0" />
+                    Pierwsza rozmowa bezpłatna
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <CheckCircle size={14} className="text-gold flex-shrink-0" />
+                    Online w całej Polsce
+                  </span>
+                </div>
               </div>
             </FadeInSection>
 
+            {/* Right — photo + floating elements */}
             <FadeInSection direction="right" delay={0.15}>
               <div className="relative w-full max-w-sm mx-auto lg:max-w-none">
-                <div className="relative aspect-[4/3] lg:aspect-[3/4] rounded-2xl overflow-hidden">
+                <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-xl">
                   <Image
                     src="/gfx/ewelina_1.jpg"
                     alt="Ewelina Dyjak — Konsultantka Kariery"
@@ -133,60 +167,105 @@ export default function HomePage() {
                     sizes="(max-width: 1024px) 384px, 50vw"
                     priority
                   />
+                  {/* Gradient overlay bottom */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
                 </div>
-                <div className="absolute -bottom-4 -left-4 lg:-left-8 bg-white rounded-2xl shadow-lg p-4 flex items-center gap-3">
+
+                {/* Floating badge — experience */}
+                <div className="absolute -bottom-4 -left-4 lg:-left-8 bg-white rounded-2xl shadow-lg p-4 flex items-center gap-3 border border-warm">
                   <div className="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center flex-shrink-0">
                     <CheckCircle size={20} className="text-gold" />
                   </div>
                   <div>
                     <p className="text-xs text-gray-400 leading-none mb-0.5">Doświadczenie</p>
-                    <p className="text-sm font-semibold text-[#1A1A1A] leading-none">
-                      7+ lat i 1000+ godzin sesji
+                    <p className="text-sm font-bold text-[#1A1A1A] leading-none">
+                      12 lat · 1000+ godzin sesji
                     </p>
                   </div>
                 </div>
+
+                {/* Floating badge — testimonial */}
+                <div className="absolute -top-4 -right-4 lg:-right-6 bg-white rounded-2xl shadow-lg p-4 max-w-[200px] border border-warm">
+                  <div className="flex items-center gap-0.5 mb-2">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <Star key={i} size={12} className="text-gold fill-gold" />
+                    ))}
+                  </div>
+                  <p className="text-xs text-gray-600 leading-snug italic">
+                    „+100% do pewności siebie"
+                  </p>
+                  <p className="text-xs text-gray-400 mt-1.5 font-medium">— Marta B.</p>
+                </div>
               </div>
             </FadeInSection>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ===== TRUST BAR ===== */}
+      <section className="bg-white border-y border-warm">
+        <div className="container-width py-6">
+          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-3">
+            {[
+              { num: '1000+', label: 'godzin konsultacji' },
+              { num: '12 lat', label: 'doświadczenia w Biurze Karier' },
+              { num: '7★', label: 'opinii — wszystkie 5/5' },
+              { num: '100%', label: 'indywidualne podejście' },
+            ].map((item, i) => (
+              <div key={i} className="flex items-center gap-3 text-sm">
+                <span className="font-bold text-gold text-base">{item.num}</span>
+                <span className="text-gray-500">{item.label}</span>
+                {i < 3 && <span className="hidden sm:block w-px h-4 bg-warm" />}
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* ===== PAIN POINTS ===== */}
-      <section className="bg-white section-padding">
+      <section className="bg-beige section-padding">
         <div className="container-width">
           <FadeInSection className="text-center mb-12">
             <p className="section-label">Rozpoznajesz to?</p>
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1A1A1A] max-w-2xl mx-auto">
-              Jeśli masz dość tkwienia w miejscu — to dobrze trafiłeś/aś
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1A1A1A] max-w-2xl mx-auto leading-tight">
+              Jeśli masz dość tkwienia w miejscu —{' '}
+              <span className="text-gold">to dobrze trafiłaś/eś</span>
             </h2>
           </FadeInSection>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
             {painPoints.map((point, index) => (
               <FadeInSection key={index} delay={index * 0.07}>
-                <div className="flex items-start gap-3 bg-beige rounded-xl p-5 h-full">
-                  <ArrowRight size={18} className="text-gold flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-600 text-sm leading-relaxed">{point}</p>
+                <div className="flex items-start gap-3 bg-white rounded-xl p-5 h-full shadow-sm border border-warm/50">
+                  <span className="text-2xl flex-shrink-0">{point.emoji}</span>
+                  <p className="text-gray-600 text-sm leading-relaxed">{point.text}</p>
                 </div>
               </FadeInSection>
             ))}
           </div>
 
           <FadeInSection>
-            <p className="text-center text-gray-500 text-lg max-w-2xl mx-auto">
-              Nie musisz sam/sama przez to przechodzić. Pracuję z osobami dokładnie
-              w takiej sytuacji — i razem dochodzimy do konkretnych odpowiedzi i działań.
-            </p>
+            <div className="text-center">
+              <p className="text-gray-600 text-lg max-w-xl mx-auto mb-6">
+                Nie musisz przez to przechodzić sama/sam. Pracuję z osobami dokładnie
+                w takiej sytuacji — i razem dochodzimy do konkretnych odpowiedzi.
+              </p>
+              <Link href="/kontakt" className="btn-primary inline-flex items-center gap-2">
+                Umów bezpłatną rozmowę wstępną
+                <ArrowRight size={16} />
+              </Link>
+            </div>
           </FadeInSection>
         </div>
       </section>
 
-      {/* ===== O MNIE / WIARYGODNOŚĆ ===== */}
-      <section className="bg-beige section-padding">
+      {/* ===== O MNIE ===== */}
+      <section className="bg-white section-padding">
         <div className="container-width">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <FadeInSection direction="left">
-              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md">
                 <Image
                   src="/gfx/ewelina_2.jpg"
                   alt="Ewelina Dyjak — konsultantka kariery podczas sesji"
@@ -202,19 +281,19 @@ export default function HomePage() {
                 <p className="section-label">Kim jestem</p>
                 <h2 className="text-3xl lg:text-4xl font-bold text-[#1A1A1A] mb-6">
                   Ewelina Dyjak —{' '}
-                  <span className="text-gold">konsultantka kariery i coach</span>
+                  <span className="text-gold">konsultantka kariery i doradca zawodowy</span>
                 </h2>
                 <div className="space-y-4 text-gray-500 text-base leading-relaxed mb-8">
                   <p>
-                    Od ponad 7 lat pomagam ludziom odnaleźć się w zawodowym życiu.
-                    Przeprowadziłam ponad 1000 godzin indywidualnych konsultacji
-                    z osobami na różnych etapach kariery — od pierwszej zmiany pracy,
-                    przez wypalenie zawodowe, aż po powrót na rynek po dłuższej przerwie.
+                    Przeprowadziłam ponad <strong className="text-[#1A1A1A]">1000 godzin</strong> indywidualnych
+                    konsultacji z osobami w różnym wieku, z różnych branż i na różnych etapach
+                    kariery — od pierwszej zmiany pracy, przez wypalenie zawodowe, aż po powrót
+                    na rynek po 5-letniej przerwie macierzyńskiej.
                   </p>
                   <p>
-                    Łączę narzędzia coachingowe z realną wiedzą o rynku pracy.
-                    Nie pracuję na teorii — pracuję na konkretach. Po naszych sesjach
-                    wychodzisz z planem, nie tylko z lepszym samopoczuciem.
+                    Łączę wiedzę z zakresu rynku pracy i psychologii z narzędziami coachingowymi.
+                    Nie pracuję na teorii — pracuję na konkretach. Widzę często to, czego klient
+                    sam nie dostrzega. Pomagam odzyskać energię i klarowność.
                   </p>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-gray-500 mb-8">
@@ -238,6 +317,111 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ===== USŁUGI ===== */}
+      <section className="bg-beige section-padding">
+        <div className="container-width">
+          <FadeInSection className="text-center mb-14">
+            <p className="section-label">Oferta</p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1A1A1A] mb-4">
+              Wybierz formę wsparcia
+            </h2>
+            <p className="text-gray-500 text-lg max-w-xl mx-auto">
+              Trzy różne formy pomocy — każda na inną potrzebę.
+              Kliknij kartę, żeby zobaczyć szczegóły.
+            </p>
+          </FadeInSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {services.map((service, index) => {
+              const Icon = service.icon
+              return (
+                <FadeInSection key={index} delay={index * 0.1}>
+                  <Link
+                    href={service.href}
+                    className={`group flex flex-col bg-white rounded-2xl overflow-hidden h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
+                      service.featured
+                        ? 'border-2 border-gold shadow-lg'
+                        : 'border border-warm shadow-sm hover:border-gold/40'
+                    }`}
+                  >
+                    {/* Card top bar */}
+                    <div
+                      className={`h-1.5 w-full ${
+                        service.featured ? 'bg-gold' : 'bg-brand-blue/20'
+                      }`}
+                    />
+
+                    <div className="p-7 flex flex-col flex-1">
+                      {service.featured && (
+                        <span className="inline-flex items-center gap-1 text-xs font-semibold text-gold uppercase tracking-wider mb-3">
+                          <Star size={11} className="fill-gold" />
+                          Polecane
+                        </span>
+                      )}
+
+                      <div
+                        className={`w-12 h-12 rounded-xl flex items-center justify-center mb-5 ${
+                          service.featured ? 'bg-gold/10' : 'bg-brand-blue/8'
+                        }`}
+                      >
+                        <Icon
+                          size={22}
+                          className={service.featured ? 'text-gold' : 'text-brand-blue'}
+                        />
+                      </div>
+
+                      <h3 className="text-xl font-bold text-[#1A1A1A] mb-2">
+                        {service.label}
+                      </h3>
+                      <p className="text-gray-500 text-sm leading-relaxed mb-5">
+                        {service.tagline}
+                      </p>
+
+                      <ul className="space-y-2 mb-6 flex-1">
+                        {service.bullets.map((bullet, i) => (
+                          <li key={i} className="flex items-start gap-2">
+                            <CheckCircle
+                              size={14}
+                              className="text-gold flex-shrink-0 mt-0.5"
+                            />
+                            <span className="text-gray-600 text-xs leading-relaxed">{bullet}</span>
+                          </li>
+                        ))}
+                      </ul>
+
+                      <div className="flex items-center justify-between pt-5 border-t border-warm mt-auto">
+                        <div>
+                          <p className="text-xs text-gray-400 mb-0.5">{service.priceNote}</p>
+                          <p className="font-bold text-[#1A1A1A]">{service.price}</p>
+                        </div>
+                        <span
+                          className={`inline-flex items-center gap-1.5 text-sm font-semibold transition-all duration-200 group-hover:gap-3 ${
+                            service.featured ? 'text-gold' : 'text-brand-blue'
+                          }`}
+                        >
+                          Dowiedz się więcej
+                          <ArrowRight size={15} />
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
+                </FadeInSection>
+              )
+            })}
+          </div>
+
+          <FadeInSection delay={0.3}>
+            <p className="text-center text-gray-400 text-sm mt-8">
+              Nie wiesz, co wybrać?{' '}
+              <Link href="/kontakt" className="text-gold hover:underline font-medium">
+                Napisz do mnie
+              </Link>{' '}
+              albo umów bezpłatną rozmowę wstępną — razem ustalimy, co będzie najlepsze.
+            </p>
+          </FadeInSection>
+        </div>
+      </section>
+
       {/* ===== PROCES ===== */}
       <section className="bg-white section-padding">
         <div className="container-width">
@@ -248,11 +432,11 @@ export default function HomePage() {
             </h2>
           </FadeInSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             {processSteps.map((step, index) => (
               <FadeInSection key={index} delay={index * 0.1}>
                 <div className="relative bg-beige rounded-2xl p-8 h-full">
-                  <span className="text-6xl font-bold text-warm leading-none block mb-6 select-none">
+                  <span className="text-6xl font-bold text-warm leading-none block mb-5 select-none">
                     {step.number}
                   </span>
                   <h3 className="text-xl font-semibold text-[#1A1A1A] mb-3">
@@ -262,8 +446,8 @@ export default function HomePage() {
                     {step.description}
                   </p>
                   {index < processSteps.length - 1 && (
-                    <div className="hidden md:block absolute -right-4 top-1/2 -translate-y-1/2 z-10">
-                      <ArrowRight size={20} className="text-warm" />
+                    <div className="hidden md:block absolute -right-3 top-1/2 -translate-y-1/2 z-10">
+                      <ArrowRight size={18} className="text-warm" />
                     </div>
                   )}
                 </div>
@@ -272,7 +456,7 @@ export default function HomePage() {
           </div>
 
           <FadeInSection delay={0.3}>
-            <div className="text-center mt-12">
+            <div className="text-center">
               <Link href="/kontakt" className="btn-primary inline-flex items-center gap-2">
                 Zacznijmy od bezpłatnej rozmowy
                 <ArrowRight size={16} />
@@ -282,81 +466,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== USŁUGI ===== */}
-      <section className="bg-beige section-padding">
-        <div className="container-width">
-          <FadeInSection className="text-center mb-16">
-            <p className="section-label">Oferta</p>
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1A1A1A]">
-              Wybierz formę współpracy
-            </h2>
-          </FadeInSection>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {services.map((service, index) => {
-              const Icon = service.icon
-              return (
-                <FadeInSection key={index} delay={index * 0.1}>
-                  <div
-                    className={`card h-full flex flex-col relative ${
-                      service.featured
-                        ? 'border-2 border-gold shadow-lg'
-                        : 'border border-warm'
-                    }`}
-                  >
-                    {service.featured && (
-                      <span className="absolute -top-3 left-6 bg-gold text-white text-xs font-semibold px-4 py-1 rounded-full">
-                        Najpopularniejsze
-                      </span>
-                    )}
-                    <div
-                      className={`w-12 h-12 rounded-xl flex items-center justify-center mb-5 ${
-                        service.featured ? 'bg-gold/10' : 'bg-brand-blue/10'
-                      }`}
-                    >
-                      <Icon
-                        size={22}
-                        className={service.featured ? 'text-gold' : 'text-brand-blue'}
-                      />
-                    </div>
-                    <h3 className="text-lg font-semibold text-[#1A1A1A] mb-3">
-                      {service.title}
-                    </h3>
-                    <p className="text-gray-500 text-sm leading-relaxed flex-1 mb-6">
-                      {service.description}
-                    </p>
-                    <Link
-                      href={service.href}
-                      className={`text-sm font-medium flex items-center gap-1.5 group transition-colors duration-200 ${
-                        service.featured ? 'text-gold' : 'text-brand-blue'
-                      }`}
-                    >
-                      Dowiedz się więcej
-                      <ArrowRight
-                        size={14}
-                        className="group-hover:translate-x-0.5 transition-transform duration-200"
-                      />
-                    </Link>
-                  </div>
-                </FadeInSection>
-              )
-            })}
-          </div>
-
-          <FadeInSection delay={0.3}>
-            <p className="text-center text-gray-400 text-sm mt-8">
-              Nie jesteś pewien/pewna, który pakiet jest dla Ciebie?{' '}
-              <Link href="/kontakt" className="text-gold hover:underline font-medium">
-                Napisz do mnie
-              </Link>{' '}
-              — pomogę wybrać.
-            </p>
-          </FadeInSection>
-        </div>
-      </section>
-
       {/* ===== OPINIE ===== */}
-      <section className="bg-white section-padding">
+      <section className="bg-beige section-padding">
         <div className="container-width">
           <FadeInSection className="text-center mb-12">
             <p className="section-label">Opinie klientów</p>
@@ -373,7 +484,7 @@ export default function HomePage() {
             <div className="text-center mt-10">
               <Link
                 href="/klienci"
-                className="text-brand-blue text-sm font-medium hover:underline inline-flex items-center gap-1"
+                className="text-brand-blue text-sm font-medium hover:underline inline-flex items-center gap-1.5"
               >
                 Przeczytaj wszystkie opinie
                 <ArrowRight size={14} />
@@ -383,26 +494,25 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== FINALNE CTA ===== */}
+      {/* ===== CTA ===== */}
       <section className="bg-brand-blue section-padding">
         <div className="container-width">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <FadeInSection direction="left">
               <div>
-                <h2 className="text-3xl lg:text-4xl font-bold text-white mb-5">
-                  Gotowy/a na zmianę?
+                <h2 className="text-3xl lg:text-4xl font-bold text-white mb-5 leading-tight">
+                  Gotowa/y na zmianę?
                   <br />
                   Zacznij od jednej rozmowy.
                 </h2>
                 <p className="text-white/80 text-lg leading-relaxed mb-8">
-                  Podczas bezpłatnej 30-minutowej rozmowy wstępnej przyjrzymy się
-                  Twojej sytuacji i ustalimy, czy i jak mogę Ci pomóc. Bez presji,
-                  bez zobowiązań.
+                  Bezpłatna rozmowa wstępna (~20 min) — opowiadasz o swojej sytuacji,
+                  ja pokazuję możliwe formy wsparcia. Bez presji, bez zobowiązań.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href="/kontakt"
-                    className="bg-white text-gold px-8 py-4 rounded-full font-semibold hover:bg-cream transition-colors duration-200 text-center text-sm"
+                    className="bg-white text-gold px-8 py-4 rounded-full font-semibold hover:bg-cream transition-colors duration-200 text-center text-sm shadow-md"
                   >
                     Umów bezpłatną rozmowę
                   </Link>
@@ -410,7 +520,7 @@ export default function HomePage() {
                     href="/uslugi"
                     className="border border-white/40 text-white px-8 py-4 rounded-full font-medium hover:border-white/80 transition-colors duration-200 text-center text-sm"
                   >
-                    Zobacz ofertę
+                    Zobacz całą ofertę
                   </Link>
                 </div>
                 <p className="text-white/60 text-sm mt-5 flex items-center gap-2">
@@ -422,34 +532,34 @@ export default function HomePage() {
 
             <FadeInSection direction="right" delay={0.15}>
               <div className="space-y-4">
-                <div className="bg-white/10 rounded-2xl p-5 flex items-start gap-4">
+                <a
+                  href="tel:+48603614521"
+                  className="bg-white/10 hover:bg-white/15 transition-colors duration-200 rounded-2xl p-5 flex items-start gap-4 group"
+                >
                   <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
                     <Phone size={18} className="text-white" />
                   </div>
                   <div>
                     <p className="text-white/60 text-xs mb-1">Telefon</p>
-                    <a
-                      href="tel:+48000000000"
-                      className="text-white font-medium text-sm hover:text-white/80 transition-colors"
-                    >
-                      +48 000 000 000
-                    </a>
+                    <p className="text-white font-medium text-sm group-hover:text-white/90 transition-colors">
+                      +48 603 614 521
+                    </p>
                   </div>
-                </div>
-                <div className="bg-white/10 rounded-2xl p-5 flex items-start gap-4">
+                </a>
+                <a
+                  href="mailto:doradztwo.coaching@gmail.com"
+                  className="bg-white/10 hover:bg-white/15 transition-colors duration-200 rounded-2xl p-5 flex items-start gap-4 group"
+                >
                   <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
                     <Mail size={18} className="text-white" />
                   </div>
                   <div>
                     <p className="text-white/60 text-xs mb-1">E-mail</p>
-                    <a
-                      href="mailto:kontakt@konsultantkakariery.pl"
-                      className="text-white font-medium text-sm hover:text-white/80 transition-colors"
-                    >
-                      kontakt@konsultantkakariery.pl
-                    </a>
+                    <p className="text-white font-medium text-sm group-hover:text-white/90 transition-colors">
+                      doradztwo.coaching@gmail.com
+                    </p>
                   </div>
-                </div>
+                </a>
                 <div className="bg-white/10 rounded-2xl p-5 flex items-start gap-4">
                   <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
                     <MapPin size={18} className="text-white" />
@@ -459,6 +569,21 @@ export default function HomePage() {
                     <p className="text-white font-medium text-sm">
                       Lublin | Online w całej Polsce
                     </p>
+                  </div>
+                </div>
+
+                {/* Mini testimonial */}
+                <div className="bg-white/10 rounded-2xl p-5">
+                  <Quote size={20} className="text-gold/40 fill-gold/20 mb-3" />
+                  <p className="text-white/80 text-sm italic leading-relaxed mb-3">
+                    „Ewelina trafnie zidentyfikowała obszary do naszej wspólnej pracy już
+                    na 20-minutowej rozmowie przedwstępnej."
+                  </p>
+                  <div className="flex items-center gap-1">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <Star key={i} size={11} className="text-gold fill-gold" />
+                    ))}
+                    <span className="text-white/50 text-xs ml-2">— Natalia J.</span>
                   </div>
                 </div>
               </div>
@@ -491,7 +616,7 @@ export default function HomePage() {
               <FadeInSection key={post.slug} delay={index * 0.1}>
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="group block bg-beige rounded-2xl overflow-hidden hover:shadow-md transition-all duration-300 h-full"
+                  className="group block bg-beige rounded-2xl overflow-hidden hover:shadow-md transition-all duration-300 h-full border border-warm/50 hover:border-gold/30"
                 >
                   {post.image ? (
                     <div className="aspect-[16/9] relative overflow-hidden">
