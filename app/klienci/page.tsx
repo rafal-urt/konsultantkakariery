@@ -19,64 +19,91 @@ export const metadata: Metadata = {
 
 const testimonials = [
   {
-    name: 'Eliza',
-    role: 'Kierownik Sprzedaży',
+    name: 'Natalia Jędrzejewska',
+    role: 'Doradca i opiekun klienta, Sommelier',
+    initial: 'N',
+    rating: 5,
+    short: 'Stopniowa, realna zmiana podejścia',
+    content: `Na konsultację kariery u Eweliny trafiłam szukając pomocy w powrocie na rynek pracy po podwójnym urlopie macierzyńskim. Ewelina to empatyczna osoba, którą cechuje wysoko rozwinięta inteligencja emocjonalna. Już na 20-minutowej rozmowie przedwstępnej trafnie zidentyfikowała obszary do naszej wspólnej pracy.
+
+Jestem sama zaskoczona obrotem sytuacji: na początku nie byłam pewna czy ta konsultacja jest dla mnie. Mam ambiwalentny stosunek do coachingu, ale ze spotkania na spotkanie zauważyłam stopniową zmianę swojego podejścia odnośnie szukania pracy i oceny moich kwalifikacji i kompetencji.
+
+Po kilkuletnim wykluczeniu z rynku pracy związanym z objęciem nowej roli jako mamy, Ewelina w naturalny, ale bardzo celowany i umiejętny sposób wpłynęła na zmianę mojej postawy i zmotywowała mnie do działania. Jest to profesjonalistka, ciepła, empatyczna osoba, wsłuchuje się w potrzeby klienta i dopasowuje się do oczekiwań. Atmosfera spotkań bardzo przyjazna — czułam się komfortowo. Z całego serca polecam Ewelinę.`,
+  },
+  {
+    name: 'Eliza Rokosz',
+    role: 'Kierownik Sprzedaży, Polska Korporacja Recyklingu',
     initial: 'E',
     rating: 5,
     short: 'Odnalazłam swoją zawodową drogę',
-    content: `Ewelina to profesjonalistka z bardzo indywidualnym podejściem do klienta. Dokładnie analizuje sytuację, jest empatyczna i zawsze świetnie przygotowana do spotkań.
+    content: `Z przyjemnością polecam Ewelinę jako konsultantkę kariery. Miałam okazję skorzystać z jej usług i jestem zachwycona efektami. Ewelina to prawdziwa profesjonalistka z bardzo indywidualnym podejściem do klienta.
 
-Dzięki jej wsparciu odnalazłam swoją zawodową drogę i poczułam, że mam realny wpływ na dalszy rozwój kariery. Byłam osobą zagubioną — nie wiedziałam, czy zmienić pracę, czy może całą branżę, czy to tylko chwilowe wypalenie.
+Cechuje ją pełen profesjonalizm — jest rzetelna, punktualna i zawsze przygotowana do spotkania. Dokładnie analizuje sytuację klienta i oferuje spersonalizowane rozwiązania. Nie boi się trudnych wyzwań. Potrafi podejść do każdego problemu w sposób konstruktywny i znaleźć efektywne rozwiązanie.
 
-Ewelina pomogła mi zadać właściwe pytania, spojrzeć na swoją sytuację z innej perspektywy i podjąć decyzję, z którą czułam się naprawdę dobrze. Polecam serdecznie osobom zagubionym w karierze, chcącym zmienić pracę, mającym problem z CV, lub potrzebującym wsparcia przed ważną rozmową kwalifikacyjną.`,
+Szczególnie polecam Ewelinę osobom, które: czują się zagubione w swojej karierze i nie wiedzą, w jakim kierunku iść; chcą zmienić pracę, ale nie wiedzą od czego zacząć; mają problemy z napisaniem CV; potrzebują wsparcia w przygotowaniu się do rozmowy kwalifikacyjnej. Ewelina to wyjątkowa konsultantka kariery, która pomogła mi odnaleźć moją zawodową drogę.`,
   },
   {
-    name: 'Marta',
-    role: 'Employer Branding Specialist',
+    name: 'Marta Banaszewska',
+    role: 'Employer Branding Specialist, Xebia Polska',
     initial: 'M',
     rating: 5,
-    short: 'Ogromny wzrost pewności siebie',
-    content: `Dzięki pracy z Eweliną po raz pierwszy bez wahania nazwałam swoje mocne strony i poczułam ogromny wzrost pewności siebie. Zrozumiałam, nad czym chcę pracować i w jakim kierunku iść zawodowo.
+    short: '+100% do pewności siebie',
+    content: `Jakiś czas temu szukałam coacha lub doradcy zawodowego z prawdziwego zdarzenia. Spotkałam się z wieloma poleceniami, jednak najbardziej urzekł mnie pewien komentarz na Facebooku, w którym Ewelina została określona jako „kobieta o piątym i szóstym zmyśle, dużym doświadczeniu, pokładach empatii i taka co naprawdę potrafi pomóc" — potwierdzam każde słowo.
 
-Zmiany, które zaszły, były dla mnie szczególnie ważne na poziomie myślenia o sobie. Wcześniej ciągle umniejszałam swoje osiągnięcia i kompetencje. Po pracy z Eweliną patrzę na siebie i swoją karierę zupełnie inaczej.
+Z Eweliną umówiłam się początkowo na 3 spotkania, jednak przez moje gadulstwo skończyło się na 5. Co zmieniło się po tych 5 spotkaniach?
 
-To, co cenię najbardziej, to umiejętność Eweliny do słuchania i zadawania pytań, które naprawdę skłaniają do refleksji. Nie daje gotowych odpowiedzi — pomaga odkryć te własne.`,
+1. Po raz pierwszy, bez wątpliwości, byłam w stanie powiedzieć głośno, że super wykonuję swoją pracę i jestem dobrym pracownikiem — +100% do pewności siebie.
+2. Ewelina pomogła mi określić moje mocne strony, o których jestem teraz w stanie mówić otwarcie.
+3. Wiem, nad jakimi cechami i umiejętnościami chcę popracować i za co nigdy w życiu zawodowo nie chcę się brać.
+4. Dzięki uważnemu słuchaniu Ewelina wyłapała w moich słowach rzeczy, którym albo zaciekle zaprzeczałam, albo nie byłam ich świadoma — wszystkie okazały się kluczowe.
+
+Współpracę z Eweliną polecam każdemu, kto potrzebuje zmian — szczególnie tych w głowie.`,
   },
   {
-    name: 'Sylwia',
-    role: 'Graficzka Komputerowa',
+    name: 'Sylwia Szewczuk',
+    role: 'Grafik komputerowy, INQ Trade',
     initial: 'S',
     rating: 5,
     short: 'Znalazłam nową pracę dzięki tej współpracy',
-    content: `Ewelina świetnie przygotowała mnie do rozmowy kwalifikacyjnej, znacząco obniżając poziom stresu i dodając wiary w siebie. Jej pytania i wskazówki pomogły mi lepiej zaprezentować swoje kompetencje.
+    content: `Ewelina profesjonalnie pomogła mi przygotować się do rozmowy kwalifikacyjnej, zmniejszając znacznie poziom odczuwanego stresu i dodając pozytywnej energii oraz wiary w siebie.
 
-Przed spotkaniem z Eweliną byłam przekonana, że sobie nie poradzę na rozmowie. Pracowałyśmy nad tym, jak mówić o swoich projektach, jak odpowiadać na trudne pytania i jak radzić sobie z tremą.
+Wykazała się dużą uważnością, wiedzą o branżach oraz o samym procesie rekrutacji. Jej pytania i uwagi znacząco pomogły mi w pozytywnym zaprezentowaniu swojej osoby na rozmowie — sprawiły, że byłam dużo spokojniejsza i pewniejsza siebie, miałam poczucie, że poradzę sobie z każdym pytaniem.
 
-Dzięki temu udało mi się z sukcesem znaleźć nową pracę. Jestem naprawdę wdzięczna za tę pomoc — to był jeden z tych momentów, kiedy poczułam, że profesjonalne wsparcie naprawdę robi różnicę.`,
+Ostatecznie udało mi się odnieść sukces w znalezieniu nowej pracy. Bardzo polecam konsultacje u Eweliny w tym niełatwym okresie zmiany pracy — jest to naprawdę nieocenione wsparcie.`,
   },
   {
-    name: 'Łukasz',
-    role: 'Operator Filmowy',
+    name: 'Łukasz Klat',
+    role: 'Operator filmowy',
     initial: 'Ł',
     rating: 5,
-    short: 'Spokój, jasność i plan działania',
-    content: `W trakcie kilku spotkań stworzyliśmy konkretny i realny plan przebranżowienia oraz dalszego rozwoju kariery. Ewelina dała mi narzędzia, które mogę wykorzystywać także samodzielnie w przyszłości.
+    short: 'Spokój, jasność i konkretny plan przebranżowienia',
+    content: `W ciągu 4 spotkań wyznaczyliśmy plan krok po kroku na kompletne przebranżowienie (plan 3–5-letni) oraz na maksymalizację zasobów i możliwości sterowania karierą „tu i teraz".
 
-Zaczęliśmy od tego, gdzie jestem teraz i dlaczego czuję, że czas na zmianę. Przez kolejne spotkania odkrywaliśmy moje zasoby, możliwe kierunki i to, co naprawdę jest dla mnie ważne w pracy.
+Współpraca z Eweliną dała mi możliwość: podsumowania sukcesów i lekcji z dotychczasowej ścieżki, odnalezienia wewnętrznego spokoju w czasie dynamicznie zmieniającej się sytuacji geopolitycznej, skorzystania z narzędzi, których prostota daje możliwość powtórzenia całego procesu samodzielnie w przyszłości, podbudowania samooceny i realnego spojrzenia na swoje miejsce na rynku pracy, a także ostudzenia zapału do „skoku na główkę" i zamiany go na pomysły na „sprawdzenie głębokości wody".
 
-Ta współpraca przyniosła mi spokój, jasność i poczucie kontroli nad moją ścieżką zawodową. Wychodziłem z każdego spotkania z konkretnym action-stepem — coś, co mogłem zrobić już następnego dnia. Nie było to ogólnikowe doradztwo, tylko realne, dopasowane do mnie wsparcie.`,
+Narzędzia, tempo pracy, zadania domowe, ciepło i żywe zainteresowanie klientem — to wszystko pozwala mi całym sercem polecić Ewelinę Dyjak jako bardzo kompetentną Konsultantkę Kariery i Coacha Zawodowego.`,
   },
   {
-    name: 'Natalia',
-    role: 'Doradczyni i opiekunka klienta, sommelierka',
-    initial: 'N',
+    name: 'Anna Moryson',
+    role: '',
+    initial: 'A',
     rating: 5,
-    short: 'Odzyskałam energię i sprawczość',
-    content: `Rozmowy z Eweliną miały ogromny wpływ na moją pewność siebie i sposób myślenia o pracy. Pomogła mi odzyskać energię, sprawczość i wiarę w siebie w trudnym momencie zawodowym.
+    short: 'Czuję się pewniej i spokojniej',
+    content: `Konsultacja z Eweliną pozwoliła mi zupełnie inaczej spojrzeć na siebie i swoją sytuację na rynku pracy. Czuję się pewniej i spokojniej, bo wiem na czym mogę "budować" i wiem, że moje poszukiwania idealnego dla siebie miejsca — takiego, które mobilizuje i pozwala się rozwijać — to nie jest wcale jakaś naiwna mrzonka!
 
-Byłam w miejscu, w którym praca przestała mi dawać satysfakcję, ale nie wiedziałam, czego tak naprawdę chcę. Ewelina bardzo mądrze prowadziła nasze rozmowy — bez narzucania swojego zdania, ale z pomocą w odkrywaniu mojego.
+Ewelina jest bardzo kompetentna i rzeczowa, naprawdę wie, na co położyć nacisk w procesie poszukiwania pracy jak i samej rekrutacji. Praca nad CV ruszyła do przodu i co najważniejsze — w fajnym kierunku! Szczerze polecam konsultacje!`,
+  },
+  {
+    name: 'Weronika Bartczak',
+    role: '',
+    initial: 'W',
+    rating: 5,
+    short: 'Pewność siebie i gotowość do działania',
+    content: `Bardzo polecam! Ewelina „zdiagnozowała" główny problem w moim CV, przeszła ze mną krok po kroku co mogę w nim zmienić.
 
-Do dziś jestem zaskoczona, jak duży efekt przyniosła ta współpraca. Polecam Ewelinę każdemu, kto czuje się zagubiony zawodowo — niezależnie od etapu kariery.`,
+Dodatkowo na dalszych spotkaniach pomogła mi trochę odnaleźć siebie i zdecydować się na jedną ścieżkę, a przećwiczenie rozmowy rekrutacyjnej dodało mi pewności siebie i zwróciło moją uwagę na to, co mogę podkreślić, jak odpowiadać na pewne pytania, by wybrzmiało to, na czym mi zależy.
+
+Naprawdę szczerze polecam!`,
   },
 ]
 

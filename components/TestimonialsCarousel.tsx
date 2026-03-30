@@ -7,38 +7,52 @@ import { ChevronLeft, ChevronRight, Quote } from 'lucide-react'
 const testimonials = [
   {
     id: 1,
-    name: 'Natalia',
-    role: 'Doradczyni i opiekunka klienta, sommelierka',
+    name: 'Natalia Jędrzejewska',
+    role: 'Doradca i opiekun klienta, Sommelier',
     content:
-      'Rozmowy z Eweliną miały ogromny wpływ na moją pewność siebie i sposób myślenia o pracy. Pomogła mi odzyskać energię, sprawczość i wiarę w siebie w trudnym momencie zawodowym. Do dziś jestem zaskoczona, jak duży efekt przyniosła ta współpraca.',
+      'Ze spotkania na spotkanie zauważyłam stopniową zmianę swojego podejścia odnośnie szukania pracy i oceny moich kwalifikacji. Po kilkuletnim wykluczeniu z rynku pracy Ewelina w naturalny, ale bardzo celowany sposób wpłynęła na zmianę mojej postawy i zmotywowała mnie do działania. Z całego serca polecam.',
   },
   {
     id: 2,
-    name: 'Eliza',
-    role: 'Kierownik Sprzedaży',
+    name: 'Eliza Rokosz',
+    role: 'Kierownik Sprzedaży, Polska Korporacja Recyklingu',
     content:
-      'Ewelina to profesjonalistka z bardzo indywidualnym podejściem do klienta. Dokładnie analizuje sytuację, jest empatyczna i zawsze świetnie przygotowana do spotkań. Dzięki jej wsparciu odnalazłam swoją zawodową drogę i poczułam, że mam realny wpływ na dalszy rozwój kariery.',
+      'Ewelina to wyjątkowa konsultantka kariery — profesjonalistka z bardzo indywidualnym podejściem. Dokładnie analizuje sytuację klienta, jest empatyczna i zawsze świetnie przygotowana. Dzięki jej wsparciu odnalazłam swoją zawodową drogę i poczułam, że mam realny wpływ na dalszy rozwój kariery.',
   },
   {
     id: 3,
-    name: 'Marta',
-    role: 'Employer Branding Specialist',
+    name: 'Marta Banaszewska',
+    role: 'Employer Branding Specialist, Xebia Polska',
     content:
-      'Dzięki pracy z Eweliną po raz pierwszy bez wahania nazwałam swoje mocne strony i poczułam ogromny wzrost pewności siebie. Zrozumiałam, nad czym chcę pracować i w jakim kierunku iść zawodowo. Zmiany, które zaszły, były dla mnie szczególnie ważne na poziomie myślenia o sobie.',
+      'Po raz pierwszy, bez wątpliwości, byłam w stanie powiedzieć głośno, że super wykonuję swoją pracę i jestem dobrym pracownikiem — +100% do pewności siebie. Ewelina pomogła mi określić moje mocne strony, o których jestem teraz w stanie mówić otwarcie. Zmiany w mojej głowie były ogromne.',
   },
   {
     id: 4,
-    name: 'Sylwia',
-    role: 'Graficzka Komputerowa',
+    name: 'Sylwia Szewczuk',
+    role: 'Grafik komputerowy, INQ Trade',
     content:
-      'Ewelina świetnie przygotowała mnie do rozmowy kwalifikacyjnej, znacząco obniżając poziom stresu i dodając wiary w siebie. Jej pytania i wskazówki pomogły mi lepiej zaprezentować swoje kompetencje. Dzięki temu udało mi się z sukcesem znaleźć nową pracę.',
+      'Ewelina profesjonalnie pomogła mi przygotować się do rozmowy kwalifikacyjnej, zmniejszając poziom stresu i dodając wiary w siebie. Jej pytania i uwagi sprawiły, że byłam dużo spokojniejsza i pewniejsza siebie. Ostatecznie udało mi się odnieść sukces w znalezieniu nowej pracy.',
   },
   {
     id: 5,
-    name: 'Łukasz',
-    role: 'Operator Filmowy',
+    name: 'Łukasz Klat',
+    role: 'Operator filmowy',
     content:
-      'W trakcie kilku spotkań stworzyliśmy konkretny i realny plan przebranżowienia oraz dalszego rozwoju kariery. Ewelina dała mi narzędzia, które mogę wykorzystywać także samodzielnie w przyszłości. Ta współpraca przyniosła mi spokój, jasność i poczucie kontroli nad moją ścieżką zawodową.',
+      'W ciągu 4 spotkań wyznaczyliśmy plan na kompletne przebranżowienie oraz maksymalizację zasobów „tu i teraz". Ewelina ostudziła mój zapał do skoku na główkę i dała mi narzędzia do sprawdzenia głębokości wody. Narzędzia, ciepło i zainteresowanie klientem — całym sercem polecam.',
+  },
+  {
+    id: 6,
+    name: 'Anna Moryson',
+    role: '',
+    content:
+      'Konsultacja z Eweliną pozwoliła mi zupełnie inaczej spojrzeć na siebie i swoją sytuację na rynku pracy. Czuję się pewniej i spokojniej — wiem na czym mogę budować i wiem, że moje poszukiwania idealnego miejsca to nie jest naiwna mrzonka. Praca nad CV ruszyła do przodu i w fajnym kierunku!',
+  },
+  {
+    id: 7,
+    name: 'Weronika Bartczak',
+    role: '',
+    content:
+      'Ewelina zdiagnozowała główny problem w moim CV i przeszła ze mną krok po kroku co mogę zmienić. Na dalszych spotkaniach pomogła mi odnaleźć siebie i zdecydować się na jedną ścieżkę, a przećwiczenie rozmowy rekrutacyjnej dodało mi pewności siebie. Naprawdę szczerze polecam!',
   },
 ]
 

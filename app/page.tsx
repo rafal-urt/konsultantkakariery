@@ -61,27 +61,27 @@ const processSteps = [
 
 const services = [
   {
-    icon: MessageSquare,
-    title: 'Jednorazowa konsultacja kariery',
+    icon: Briefcase,
+    title: 'Konsultacje kariery',
     description:
-      'Idealna na start lub konkretny problem — rozmowa o zmianie pracy, CV, rozmowie kwalifikacyjnej lub kierunku rozwoju.',
-    href: '/uslugi',
+      'Plan ścieżki kariery (630 zł) lub kompletna zmiana zawodowa (980 zł) — 2 pakiety do wyboru. Od diagnozy mocnych stron po plan działania i wsparcie w rekrutacji.',
+    href: '/uslugi#konsultacje-kariery',
     featured: false,
   },
   {
-    icon: Layers,
-    title: 'Pakiet 5 sesji rozwoju kariery',
+    icon: MessageSquare,
+    title: 'Wróć Pewniejsza',
     description:
-      'Kompleksowa praca nad zmianą zawodową lub przebranżowieniem. Diagnoza → plan → działanie. Najpopularniejszy wybór moich klientek i klientów.',
-    href: '/uslugi',
+      'Program dla mam powracających po urlopie macierzyńskim. 5 spotkań, w których pomagam świadomie zdecydować — wrócić do starej pracy czy obrać nową ścieżkę.',
+    href: '/uslugi#wroc-pewniejsza',
     featured: true,
   },
   {
-    icon: Briefcase,
-    title: 'Przygotowanie do zmiany',
+    icon: Layers,
+    title: 'Twoje skuteczne CV',
     description:
-      'Skoncentrowany program dla osób, które mają już cel, ale potrzebują wsparcia w przygotowaniu do rozmów kwalifikacyjnych i negocjacji.',
-    href: '/uslugi',
+      'Naucz się tworzyć CV, które zwróci uwagę rekrutera. Pracujemy na Twoim dokumencie lub tworzymy od podstaw — wiedza, którą wykorzystasz w każdej rekrutacji.',
+    href: '/uslugi#skuteczne-cv',
     featured: false,
   },
 ]
