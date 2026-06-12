@@ -3,25 +3,13 @@
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { z } from 'zod'
 import { Send, CheckCircle, Loader2 } from 'lucide-react'
-
-const contactSchema = z.object({
-  name: z.string().min(2, 'Imię musi mieć co najmniej 2 znaki'),
-  email: z.string().email('Podaj prawidłowy adres email'),
-  phone: z.string().optional(),
-  subject: z.enum(
-    ['Konsultacja kariery', 'Pakiet rozwoju', 'Przygotowanie do zmiany', 'Inne'],
-    { required_error: 'Wybierz temat wiadomości' }
-  ),
-  message: z.string().min(10, 'Wiadomość musi mieć co najmniej 10 znaków'),
-})
-
-type ContactFormData = z.infer<typeof contactSchema>
+import { contactSchema, type ContactFormData } from '@/lib/contact-schema'
 
 export default function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
+  const [submitError, setSubmitError] = useState<string | null>(null)
 
   const {
     register,
@@ -34,12 +22,28 @@ export default function ContactForm() {
 
   const onSubmit = async (data: ContactFormData) => {
     setIsLoading(true)
-    // Simulate network request — backend do dodania przez klienta
-    await new Promise((resolve) => setTimeout(resolve, 1200))
-    console.log('Formularz kontaktowy:', data)
-    setIsLoading(false)
-    setIsSubmitted(true)
-    reset()
+    setSubmitError(null)
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      })
+      if (!response.ok) {
+        const body = await response.json().catch(() => null)
+        throw new Error(body?.error)
+      }
+      setIsSubmitted(true)
+      reset()
+    } catch (error) {
+      setSubmitError(
+        error instanceof Error && error.message
+          ? error.message
+          : 'Nie udało się wysłać wiadomości. Spróbuj ponownie później.'
+      )
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   if (isSubmitted) {
@@ -171,6 +175,16 @@ export default function ContactForm() {
           </p>
         )}
       </div>
+
+      {/* Submit error */}
+      {submitError && (
+        <p
+          className="text-sm text-red-500 bg-red-50 border border-red-100 rounded-lg px-4 py-3"
+          role="alert"
+        >
+          {submitError}
+        </p>
+      )}
 
       {/* Submit */}
       <button
